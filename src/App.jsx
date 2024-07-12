@@ -25,15 +25,18 @@ function App() {
         </div>
       </div>
       {/* Nav-End */}
+      
       {/* Home-Start */}
       {/* <div className="h-[100vh] w-[100vw]"></div> */}
 
       {/* Home-End */}
+
       {/* Image slide */}
       <div className="h-screen flex items-center justify-center">
         <p className="text-white font-[2rem]">Image Slide</p>
       </div>
       {/* Image slide */}
+
       {/* About Zyre */}
       <div className="h-screen flex flex-col items-center justify-center">
         <span className="text-white self-center text-[4rem] font-bold font-[inter]">
@@ -54,11 +57,13 @@ function App() {
         <Button variant="outline">Learn more</Button>
       </div>
       {/* About Zyre */}
+
       {/* Video */}
       <div className="h-screen flex items-center justify-center">
         <p className="text-white font-[2rem]">Video</p>
       </div>
       {/* Video */}
+
       {/* Solutions */}
       <div className="h-screen flex flex-col items-center justify-center p-[2rem]">
         <span className="text-white font-[2rem] font-[inter] font-bold text-[4rem]">
@@ -85,6 +90,8 @@ function App() {
           </p>
         </div>
       </div>
+      {/* Solutions */}
+
       {/* Feedback */}
       <div className="h-screen flex justify-between px-[2rem] ">
         {/* Image */}
@@ -107,6 +114,10 @@ function App() {
         {/* Inputs */}
       </div>
       {/* Feedback */}
+
+      {/* Footer */}
+
+      {/* Footer */}
     </main>
   );
 }
