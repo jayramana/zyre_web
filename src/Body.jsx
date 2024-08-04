@@ -5,6 +5,8 @@ import { FaFacebook } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { AiFillInstagram } from "react-icons/ai";
 import { IoLogoLinkedin } from "react-icons/io";
+import ImageSlide from "./ImageSlide";
+
 function Body() {
   return (
     <main className=" h-screen bg-gradient-to-b from-[#000000] to-[#545145] overflow-y-scroll fixed ">
@@ -17,9 +19,13 @@ function Body() {
         </div>
         <div>
           <ul className="flex gap-[4rem]">
-            <li className="text-white font-[inter] font-[500]">Home</li>
+            <li className="text-white font-[inter] font-[500]">
+              <a href="/">Home</a>
+            </li>
             <li className="text-white font-[inter] font-[500]">Company</li>
-            <li className="text-white font-[inter] font-[500]">Solutions</li>
+            <li className="text-white font-[inter] font-[500]">
+              <a href="/solutions">Solutions</a>
+            </li>
           </ul>
         </div>
         <div>
@@ -62,7 +68,7 @@ function Body() {
       {/* Video */}
 
       {/* Solutions */}
-      <div className="h-screen flex flex-col items-center justify-center px-[2rem] pb-[2rem]">
+      <div className="h-screen flex flex-col items-center justify-center px-[4rem] pb-[2rem]">
         <span className="text-white font-[2rem] font-[inter] font-bold text-[4rem]">
           Solutions
         </span>
@@ -76,6 +82,7 @@ function Body() {
               <li className="text-[#ffffff99]">Light control</li>
               <li className="text-[#ffffff99]">HVAC control</li>
               <li className="text-[#ffffff99]">Voice control</li>
+              <li className="text-[#ffffff99]">Mobile Connectivity</li>
             </ul>
           </section>
           <img src="/line.svg" alt="" />
@@ -83,7 +90,7 @@ function Body() {
             <div>
               <p className="text-white  text-xl">Stores and Malls</p>
             </div>
-            <ul className="text-white list-disc ">
+            <ul className="text-white list-disc pl-[1rem]">
               <li className="text-[#ffffff99]">AV control</li>
               <li className="text-[#ffffff99]">Automation and Scheduling</li>
               <li className="text-[#ffffff99]">Diming and Speed control</li>
@@ -94,7 +101,7 @@ function Body() {
             <div>
               <p className="text-white text-xl">Industries</p>
             </div>
-            <ul className="text-white list-disc pl-[5.5rem]">
+            <ul className="text-white list-disc pl-[4.8rem]">
               <li className="text-[#ffffff99]">Motors</li>
               <li className="text-[#ffffff99]">HVAC control</li>
               <li className="text-[#ffffff99]">Dryers</li>
@@ -105,15 +112,71 @@ function Body() {
       </div>
       {/* Solutions */}
 
+      {/* Customer FeedBack */}
+      <div className="flex flex-col gap-[.5rem] p-[4rem]">
+        <p className="text-center text-white font-bold text-2xl pb-[2rem]">Customer Feedback</p>
+        <div className="bg-[#000] text-white p-[2rem] rounded-lg">
+          <div className="pb-[1rem]">
+            <p className="text-2xl">Mr.Saravanan</p>
+            <span className="text-xs text-[#ffffff99]">Shop Owner</span>
+          </div>
+          <p className="leading-[2rem] text-sm ">
+            Upon acquiring the Zyre Automation Kit, my professional routine
+            transformed into a highly efficient operation. This innovative
+            technology allows me to seamlessly control my devices throughout the
+            workspace, significantly enhancing convenience, optimizing time
+            management, and reducing energy consumption costs.
+          </p>
+        </div>
+        <div className="bg-[#000] text-white p-[2rem] rounded-lg">
+          <div className="pb-[1rem]">
+            <p className="text-2xl">Mr.Rajesh</p>
+            <span className="text-xs text-[#ffffff99]">House Owner</span>
+          </div>
+          <p className="leading-[2rem] text-sm ">
+            I had the Zyre Home Automation Kit installed, and it was a seamless
+            process handled by professional technicians. The pricing is
+            reasonable, offering great value for the features provided. Using
+            the system has drastically reduced the time spent managing home
+            appliances, with easy control via smartphone and efficient
+            scheduling. Overall, it is a fantastic addition, making my home
+            smarter and my daily routine more convenient.
+          </p>
+        </div>
+        <div className="bg-[#000] text-white p-[2rem] rounded-lg">
+          <div className="pb-[1rem]">
+            <p className="text-2xl">Mr.Sidharth</p>
+            <span className="text-xs text-[#ffffff99]">
+              Small scale Industrialist
+            </span>
+          </div>
+          <p className="leading-[2rem] text-sm ">
+            We installed the Zyre Home Automation Kit in our office. The
+            installation was quick and professional. The system is reasonably
+            priced and offers excellent value. It has significantly improved
+            scheduling and control over various office functions, and the
+            notification system ensures smooth operations. Overall, it has made
+            our workplace more efficient and streamlined. Highly recommended for
+            any business looking to enhance productivity and management.
+          </p>
+        </div>
+      </div>
+      {/* Customer FeedBack */}
+
       {/* Feedback */}
-      <div className="h-screen flex justify-between px-[2rem] ">
+      <p className="text-white text-2xl font-bold text-center pb-[2rem]">Give us your feedback/Contact Us</p>
+      <div className="h-screen flex  gap-[20rem] px-[4rem] ">
         {/* Image */}
         <div>
-          <img src="/place_holder_1.svg" alt="3d" />
+          <img
+            src="/feedback.jpg"
+            alt="3d"
+            className="w-[500px] h-[500px] rounded-lg "
+          />
         </div>
         {/* Image */}
         {/* Inputs */}
-        <div className="flex flex-col gap-[2rem]">
+        <div className="flex flex-col gap-[2rem] pt-[2rem]">
           <section className="flex gap-[1rem]">
             <Input type="text" placeholder="Name" className="w-[300px]" />
             <Input type="email" placeholder="Email" className="w-[300px]" />
@@ -123,6 +186,13 @@ function Body() {
             <Input type="text" placeholder="City" className="w-[300px]" />
           </section>
           <Textarea placeholder="Address" />
+          <Button
+            type="submit"
+            variant="outline"
+            className="w-fit flex self-center"
+          >
+            Submit
+          </Button>
         </div>
         {/* Inputs */}
       </div>
@@ -134,7 +204,7 @@ function Body() {
         <section className="flex pl-[6rem] gap-[2rem]">
           <section className="flex flex-col gap-[2rem] p-[2rem]">
             <div>
-              <img src="/public/logo.png" alt="" />
+              <img src="/logo.png" alt="" />
             </div>
             <div className="flex gap-[2rem] items-center">
               <span className="text-white font-bold">Follow us on</span>
@@ -159,13 +229,14 @@ function Body() {
               <p className="text-white font-bold">Quick Links</p>
               <ul>
                 <li className="text-[#ffffff99] hover:text-white cursor-pointer">
-                  Home
+                  <a href="/">Home</a>
+                  
                 </li>
                 <li className="text-[#ffffff99] hover:text-white cursor-pointer">
                   Company
                 </li>
                 <li className="text-[#ffffff99] hover:text-white cursor-pointer">
-                  Products
+                  <a href="/solutions">Products</a>
                 </li>
                 <li className="text-[#ffffff99] hover:text-white cursor-pointer">
                   Contact
@@ -198,6 +269,9 @@ function Body() {
                 </li>
                 <li className="hover:text-white cursor-pointer">
                   Voice control
+                </li>
+                <li className="hover:text-white cursor-pointer">
+                  Mobile Connectivity
                 </li>
               </ul>
             </div>
@@ -241,8 +315,14 @@ function Body() {
               </span>
             </div>
             <div className="pl-[8rem] flex gap-[.5rem]">
-            <a href="terms" rel="external nofollow noopener" target="_blank"><span className="text-[#ffffff99] hover:text-white">Terms and Conditions</span></a>
-              <span className="text-[#ffffff99] hover:text-white">Privacy Policy</span>
+              <a href="terms" rel="external nofollow noopener" target="_blank">
+                <span className="text-[#ffffff99] hover:text-white">
+                  Terms and Conditions
+                </span>
+              </a>
+              <span className="text-[#ffffff99] hover:text-white">
+                Privacy Policy
+              </span>
             </div>
           </div>
         </section>
