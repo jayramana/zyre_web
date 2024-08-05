@@ -1,13 +1,14 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
 import { Button } from "./components/ui/button";
+// Mr.Godwin
 
 const Solutions = () => {
   return (
     <main>
       {/* Nav-Start */}
       <div>
-        <div className="flex justify-between items-center bg-[#080505] p-[2rem] fixed  w-[100%]">
+        <div className="flex justify-between items-center backdrop-blur-sm pt-[2rem] px-[2rem] fixed h-fit  w-[100%]">
           {/* Image */}
           <div>
             <img src="/logo.png" alt="" className="h-[48px] " />
@@ -15,11 +16,17 @@ const Solutions = () => {
           </div>
           <div>
             <ul className="flex gap-[4rem]">
-              <li className="text-white font-[inter] font-[500]">
-                <a href="/">Home</a>
+              <div className="flex flex-col items-center">
+                <a href="/">
+                  <li className="text-white font-[inter] font-[500] hover:underline">
+                    Home
+                  </li>
+                </a>
+              </div>
+              <li className="text-white font-[inter] font-[500] hover:underline">
+                Company
               </li>
-              <li className="text-white font-[inter] font-[500]">Company</li>
-              <li className="text-white font-[inter] font-[500]">
+              <li className="text-white font-[inter] font-[500] hover:underline">
                 <a href="/solutions">Solutions</a>
               </li>
             </ul>
@@ -31,13 +38,15 @@ const Solutions = () => {
       </div>
       {/* Nav-End */}
       <div className="bg-black text-white h-[100%] flex flex-col px-[4rem] py-[10rem]">
-        <p className="text-center font-bold text-[3rem] pb-[2rem]">Solutions</p>
+        <p className="text-center font-bold text-[3rem] pb-[2rem] bg-gradient-to-b from-[#B59410] to-[#3F3001] inline-block text-transparent bg-clip-text">
+          Solutions
+        </p>
         <div className="flex">
           <div className="flex flex-col">
             <img
               src="/light_control.jpg"
               alt=""
-              className="rounded-lg border-[2px] border-white w-[1000px] h-[200px] "
+              className="rounded-lg  w-[1000px] h-[200px] "
             />
             <p className="text-center pt-[1rem]">Lighting Control</p>
           </div>
@@ -148,6 +157,24 @@ const Solutions = () => {
             systems while on the go, and improves security by allowing immediate
             responses to unexpected events or emergencies.
           </p>
+        </div>
+        <div className="flex">
+          <p className="leading-[2rem] px-[2rem] text-justify pt-[1rem] text-[#ffffff99]">
+            speed control in home automation systems enhance comfort and energy
+            efficiency by allowing precise management of lighting intensity and
+            fan speeds through smartphone apps, voice commands, or automation
+            schedules. These features can be integrated into scenes for seamless
+            transitions and customized settings to suit various needs
+            and preferences.
+          </p>
+          <div className="flex flex-col">
+            <img
+              src="/light_control.jpg"
+              alt=""
+              className="rounded-lg border-[2px] border-white w-[1000px] h-[200px] "
+            />
+            <p className="text-center pt-[1rem]">Speed Control</p>
+          </div>
         </div>
       </div>
     </main>

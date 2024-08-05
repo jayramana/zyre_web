@@ -28,7 +28,7 @@ const Terms = () => {
           </div>
         </div>
       <div className="h-screen bg-black overflow-y-scroll  text-white p-[4rem] pt-[10rem]">
-        <h1 className="text-4xl">Terms and Conditions</h1>
+        <h1 className="text-4xl bg-gradient-to-b from-[#B59410] to-[#3F3001] inline-block text-transparent bg-clip-text">Terms and Conditions</h1>
         <p className="text-xs text-[#ffffff99] pb-[2rem]">
           Last updated: July 29, 2024
         </p>

@@ -1,17 +1,36 @@
 import { Button } from "@/components/ui/button";
+import React, { useState, useEffect } from "react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { FaFacebook } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { AiFillInstagram } from "react-icons/ai";
 import { IoLogoLinkedin } from "react-icons/io";
-import ImageSlide from "./ImageSlide";
+import { useRef } from "react";
+import Talos from "./Talos";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
 
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+// import required modules
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { motion } from "framer-motion";
+// B59410
+// 3F3001
 function Body() {
+  const [scrolled, setScrolled] = useState(false);
   return (
-    <main className=" h-screen bg-gradient-to-b from-[#000000] to-[#545145] overflow-y-scroll fixed ">
+    <main className=" h-[100%] bg-gradient-to-b from-[#000000] to-[#545145] ">
       {/* Nav-Start */}
-      <div className="flex justify-between items-center bg-[#080505] p-[2rem] fixed w-[100%]">
+      <div
+        className={`flex justify-between items-center p-[2rem] z-50 fixed w-[100%]
+        backdrop-blur-sm pt-[2rem] px-[2rem]
+        `}
+      >
         {/* Image */}
         <div>
           <img src="/logo.png" alt="" className="h-[48px] " />
@@ -19,11 +38,21 @@ function Body() {
         </div>
         <div>
           <ul className="flex gap-[4rem]">
-            <li className="text-white font-[inter] font-[500]">
-              <a href="/">Home</a>
-            </li>
-            <li className="text-white font-[inter] font-[500]">Company</li>
-            <li className="text-white font-[inter] font-[500]">
+            <div>
+              <a href="/">
+                <li className="text-white font-[inter] font-[500] hover:underline">
+                  Home
+                </li>
+              </a>
+            </div>
+            <a
+              href="/company"
+            >
+              <li className="text-white font-[inter] font-[500] hover:underline">
+                Company
+              </li>
+            </a>
+            <li className="text-white font-[inter] font-[500] hover:underline">
               <a href="/solutions">Solutions</a>
             </li>
           </ul>
@@ -40,15 +69,52 @@ function Body() {
       {/* Home-End */}
 
       {/* Image slide */}
-      <div className="h-screen flex items-center justify-center">
-        <p className="text-white font-[2rem]">Image Slide</p>
+      <div className="h-screen flex items-center justify-center pt-[8rem]">
+        <Swiper
+          spaceBetween={30}
+          centeredSlides={true}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          pagination={{
+            clickable: true,
+          }}
+          navigation={true}
+          modules={[Autoplay, Pagination, Navigation]}
+          className="flex h-screen"
+        >
+          <SwiperSlide className="text-white flex items-center justify-center">
+            Slide 1
+          </SwiperSlide>
+          <SwiperSlide className="text-white flex items-center justify-center">
+            Slide 2
+          </SwiperSlide>
+          <SwiperSlide className="text-white flex items-center justify-center">
+            Slide 3
+          </SwiperSlide>
+          {/* <SwiperSlide className="text-white flex items-center justify-center">Slide 4</SwiperSlide>
+          <SwiperSlide className="text-white flex items-center justify-center">Slide 5</SwiperSlide>
+          <SwiperSlide className="text-white flex items-center justify-center">Slide 6</SwiperSlide>
+          <SwiperSlide className="text-white flex items-center justify-center">Slide 7</SwiperSlide>
+          <SwiperSlide className="text-white flex items-center justify-center">Slide 8</SwiperSlide>
+          <SwiperSlide className="text-white flex items-center justify-center">Slide 9</SwiperSlide> */}
+        </Swiper>
       </div>
       {/* Image slide */}
 
       {/* About Zyre */}
+      <motion.span
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{
+            duration: 0.25,
+            delay: 200/10,
+          }}
+        >
       <div className="h-screen flex flex-col items-center justify-center p-[20rem]">
-        <span className="text-white self-center text-[4rem] font-bold font-[inter] pb-[1rem]">
-          About Zyre
+        <span className="self-center text-[4rem] font-bold font-[inter] pb-[1rem] bg-gradient-to-b from-[#B59410] to-[#3F3001] inline-block text-transparent bg-clip-text">
+          About ZYRE
         </span>
         <p className="text-[#ffffff99] leading-8 text-center pb-[2rem] ">
           Zyre pioneers seamless home automation solutions, blending
@@ -57,19 +123,24 @@ function Body() {
           energy-efficient controls, Zyre redefines modern living through
           innovation and connectivity.
         </p>
-        <Button variant="outline">Learn more</Button>
+        <Button variant="outline" className="hover:shadow-md">
+          Learn more
+          </Button>
       </div>
+          </motion.span>
       {/* About Zyre */}
 
       {/* Video */}
       <div className="h-screen flex items-center justify-center">
-        <p className="text-white font-[2rem]">Video</p>
+        <p className="text-white font-[2rem] bg-gradient-to-b from-[#B59410] to-[#3F3001] inline-block text-transparent bg-clip-text">
+          Video
+        </p>
       </div>
       {/* Video */}
 
       {/* Solutions */}
       <div className="h-screen flex flex-col items-center justify-center px-[4rem] pb-[2rem]">
-        <span className="text-white font-[2rem] font-[inter] font-bold text-[4rem]">
+        <span className=" font-[2rem] font-[inter] font-bold text-[4rem] bg-gradient-to-b from-[#B59410] to-[#3F3001] inline-block text-transparent bg-clip-text">
           Solutions
         </span>
         <img src="/line.svg" alt="" />
@@ -83,6 +154,7 @@ function Body() {
               <li className="text-[#ffffff99]">HVAC control</li>
               <li className="text-[#ffffff99]">Voice control</li>
               <li className="text-[#ffffff99]">Mobile Connectivity</li>
+              <li className="text-[#ffffff99]">Kitchen Appliances</li>
             </ul>
           </section>
           <img src="/line.svg" alt="" />
@@ -93,7 +165,7 @@ function Body() {
             <ul className="text-white list-disc pl-[1rem]">
               <li className="text-[#ffffff99]">AV control</li>
               <li className="text-[#ffffff99]">Automation and Scheduling</li>
-              <li className="text-[#ffffff99]">Diming and Speed control</li>
+              <li className="text-[#ffffff99]">Speed control</li>
             </ul>
           </section>
           <img src="/line.svg" alt="" />
@@ -114,7 +186,9 @@ function Body() {
 
       {/* Customer FeedBack */}
       <div className="flex flex-col gap-[.5rem] p-[4rem]">
-        <p className="text-center text-white font-bold text-2xl pb-[2rem]">Customer Feedback</p>
+        <p className="text-center font-bold text-[4rem] pb-[2rem] bg-gradient-to-b from-[#B59410] to-[#3F3001] inline-block text-transparent bg-clip-text">
+          Customer Feedback
+        </p>
         <div className="bg-[#000] text-white p-[2rem] rounded-lg">
           <div className="pb-[1rem]">
             <p className="text-2xl">Mr.Saravanan</p>
@@ -164,7 +238,9 @@ function Body() {
       {/* Customer FeedBack */}
 
       {/* Feedback */}
-      <p className="text-white text-2xl font-bold text-center pb-[2rem]">Give us your feedback/Contact Us</p>
+      <p className="text-white text-2xl font-bold text-center pb-[2rem]">
+        Give us your feedback/Contact Us
+      </p>
       <div className="h-screen flex  gap-[20rem] px-[4rem] ">
         {/* Image */}
         <div>
@@ -186,11 +262,7 @@ function Body() {
             <Input type="text" placeholder="City" className="w-[300px]" />
           </section>
           <Textarea placeholder="Address" />
-          <Button
-            type="submit"
-            variant="outline"
-            className="w-fit flex self-center"
-          >
+          <Button type="submit" variant="outline" className="w-fit flex">
             Submit
           </Button>
         </div>
@@ -230,7 +302,6 @@ function Body() {
               <ul>
                 <li className="text-[#ffffff99] hover:text-white cursor-pointer">
                   <a href="/">Home</a>
-                  
                 </li>
                 <li className="text-[#ffffff99] hover:text-white cursor-pointer">
                   Company
@@ -327,7 +398,7 @@ function Body() {
           </div>
         </section>
       </div>
-
+      <Talos />
       {/* Footer */}
     </main>
   );
