@@ -32,7 +32,7 @@ function Body() {
     <main className=" h-[100%] bg-gradient-to-b from-[#000000] to-[#403E3A] ">
       {/* Nav-Start */}
       <div
-        className={`flex justify-between items-center p-[2rem] z-50 fixed w-[100%]
+        className={`flex justify-between items-center  z-50 fixed w-[100%]
         backdrop-blur-md pt-[2rem] px-[2rem]
         `}
       >
@@ -47,8 +47,9 @@ function Body() {
           <ul className="flex gap-[4rem]">
             <div>
               <a href="/">
-                <li className="text-white font-[inter] font-[500] hover:underline font-zyre">
+                <li className="text-white font-[inter] font-[500]  font-zyre">
                   Home
+                  <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-white"></span>
                 </li>
               </a>
             </div>
@@ -63,10 +64,10 @@ function Body() {
               </li>
             </a>
             <a href="/solutions">
-            <li className="text-white font-[inter] font-[500] hover:underline font-zyre">
-              Solutions
+              <li className="text-white font-[inter] font-[500] hover:underline font-zyre">
+                Solutions
               </li>
-              </a>
+            </a>
           </ul>
         </div>
         <div>
@@ -76,39 +77,191 @@ function Body() {
       {/* Nav-End */}
 
       {/* Home-Start */}
-      {/* <div className="h-[100vh] w-[100vw]"></div> */}
+      <div className="h-screen  pt-[6rem] pb-[4rem]  ">
+        <img src="/home.svg" alt="" className="w-[100%] h-auto relative" />
+        <div className="absolute top-[70%] left-[25%] font-[550]">
+          <p className="text-white z-50 text-[3rem]">
+            Welcome to Zyre Home Automations
+          </p>
+          <p className="text-white text-xl">Live Smart</p>
+        </div>
+      </div>
 
       {/* Home-End */}
 
       {/* Image slide */}
       <div
-        className="h-screen flex items-center justify-center pt-[8rem]"
+        className="h-screen flex items-center justify-center mt-[20rem] px-[4rem]"
         data-aos="fade-up"
         data-aos-duration="1000"
       >
         <Swiper
           spaceBetween={30}
           centeredSlides={true}
-          autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
-          }}
+          // autoplay={{
+          //   delay: 2500,
+          //   disableOnInteraction: false,
+          // }}
           pagination={{
             clickable: true,
           }}
           navigation={true}
-          modules={[Autoplay, Pagination, Navigation]}
+          modules={[Pagination, Navigation]}
           className="flex h-screen"
         >
-          <SwiperSlide className="text-white flex items-center justify-center">
-            Slide 1
+          <SwiperSlide className=" flex items-center justify-center">
+            <div className="flex gap-[2rem]">
+              <img
+                src="/2switch_new.png"
+                alt=""
+                className="rounded-md object-contain "
+              />
+              {/* <div className="mr-[3.5rem]"> */}
+              {/* <p className="bg-gradient-to-b from-[#B59410] to-[#3F3001] inline-block text-transparent bg-clip-text font-zyre text-[1.5rem]">
+                Product Details
+              </p> */}
+              {/* <div className="flex flex-col gap-[1rem]">
+                <div className="flex gap-[1rem]">
+                  <p className="text-white font-zyre">Connections</p>
+                  <p className="text-white font-zyre">:</p>
+                  <p className="text-white font-zyre">2 Switchs</p>
+                </div>
+                <div className="flex gap-[1rem]">
+                  <p className="text-white font-zyre">Module Connectivity</p>
+                  <p className="text-white font-zyre">:</p>
+                  <p className="text-white font-zyre">Wi-fi</p>
+                </div>
+                <div className="flex gap-[1rem]">
+                  <p className="text-white font-zyre">
+                    Voice Assitant(s)
+                  </p>
+                  <p className="text-white font-zyre">:</p>
+                  <p className="text-white font-zyre">Google, Siri</p>
+                </div>
+              </div> */}
+              {/* </div> */}
+              <div>
+                <p className="text-white text-2xl">2 Switch Box</p>
+                <div>
+                  <p className="border-[2px] border-white rounded-md text-white border-solid inline-block px-[4px] py-[2px] text-xs">
+                    2 Switchs
+                  </p>
+                  <p className="border-[2px] border-white rounded-md text-white border-solid inline-block px-[4px] py-[2px] text-xs">
+                    Wi-Fi
+                  </p>
+                  <p className="border-[2px] border-white rounded-md text-white border-solid inline-block px-[4px] py-[2px] text-xs">
+                    Google,Siri
+                  </p>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide className=" flex items-center justify-center">
+            <div className="flex gap-[2rem]">
+              <img
+                src="/2switch.jpg"
+                alt=""
+                className="rounded-md object-contain "
+              />
+              {/* <div className="mr-[3.5rem]"> */}
+              {/* <p className="bg-gradient-to-b from-[#B59410] to-[#3F3001] inline-block text-transparent bg-clip-text font-zyre text-[1.5rem]">
+                Product Details
+              </p> */}
+              {/* <div className="flex flex-col gap-[1rem]">
+                <div className="flex gap-[1rem]">
+                  <p className="text-white font-zyre">Connections</p>
+                  <p className="text-white font-zyre">:</p>
+                  <p className="text-white font-zyre">2 Switchs</p>
+                </div>
+                <div className="flex gap-[1rem]">
+                  <p className="text-white font-zyre">Module Connectivity</p>
+                  <p className="text-white font-zyre">:</p>
+                  <p className="text-white font-zyre">Wi-fi</p>
+                </div>
+                <div className="flex gap-[1rem]">
+                  <p className="text-white font-zyre">
+                    Voice Assitant(s)
+                  </p>
+                  <p className="text-white font-zyre">:</p>
+                  <p className="text-white font-zyre">Google, Siri</p>
+                </div>
+              </div> */}
+              {/* </div> */}
+              <div>
+                <p className="text-white text-2xl">4 Switch Box</p>
+                <div>
+                  <p className="border-[2px] border-white rounded-md text-white border-solid inline-block px-[4px] py-[2px] text-xs">
+                    4 Switchs
+                  </p>
+                  <p className="border-[2px] border-white rounded-md text-white border-solid inline-block px-[4px] py-[2px] text-xs">
+                    Wi-Fi
+                  </p>
+                  <p className="border-[2px] border-white rounded-md text-white border-solid inline-block px-[4px] py-[2px] text-xs">
+                    Google,Siri
+                  </p>
+                  <p className="border-[2px] border-white rounded-md text-white border-solid inline-block px-[4px] py-[2px] text-xs">
+                    1 Year
+                  </p>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide className=" flex items-center justify-center">
+            <div className="flex gap-[2rem]">
+              <img
+                src="/2switch.jpg"
+                alt=""
+                className="rounded-md object-contain "
+              />
+              {/* <div className="mr-[3.5rem]"> */}
+              {/* <p className="bg-gradient-to-b from-[#B59410] to-[#3F3001] inline-block text-transparent bg-clip-text font-zyre text-[1.5rem]">
+                Product Details
+              </p> */}
+              {/* <div className="flex flex-col gap-[1rem]">
+                <div className="flex gap-[1rem]">
+                  <p className="text-white font-zyre">Connections</p>
+                  <p className="text-white font-zyre">:</p>
+                  <p className="text-white font-zyre">2 Switchs</p>
+                </div>
+                <div className="flex gap-[1rem]">
+                  <p className="text-white font-zyre">Module Connectivity</p>
+                  <p className="text-white font-zyre">:</p>
+                  <p className="text-white font-zyre">Wi-fi</p>
+                </div>
+                <div className="flex gap-[1rem]">
+                  <p className="text-white font-zyre">
+                    Voice Assitant(s)
+                  </p>
+                  <p className="text-white font-zyre">:</p>
+                  <p className="text-white font-zyre">Google, Siri</p>
+                </div>
+              </div> */}
+              {/* </div> */}
+              <div>
+                <p className="text-white text-2xl">8 Switch Box</p>
+                <div>
+                  <p className="border-[2px] border-white rounded-md text-white border-solid inline-block px-[4px] py-[2px] text-xs">
+                    8 Switchs
+                  </p>
+                  <p className="border-[2px] border-white rounded-md text-white border-solid inline-block px-[4px] py-[2px] text-xs">
+                    Wi-Fi
+                  </p>
+                  <p className="border-[2px] border-white rounded-md text-white border-solid inline-block px-[4px] py-[2px] text-xs">
+                    Google,Siri
+                  </p>
+                  <p className="border-[2px] border-white rounded-md text-white border-solid inline-block px-[4px] py-[2px] text-xs">
+                    1 Year
+                  </p>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+          {/* <SwiperSlide className="text-white flex items-center justify-center">
+            <img src="/4gray.jpg" alt="" className="rounded-md" />
           </SwiperSlide>
           <SwiperSlide className="text-white flex items-center justify-center">
-            Slide 2
-          </SwiperSlide>
-          <SwiperSlide className="text-white flex items-center justify-center">
-            Slide 3
-          </SwiperSlide>
+            <img src="/8switch.jpg" alt="" className="rounded-md" />
+          </SwiperSlide> */}
           {/* <SwiperSlide className="text-white flex items-center justify-center">Slide 4</SwiperSlide>
           <SwiperSlide className="text-white flex items-center justify-center">Slide 5</SwiperSlide>
           <SwiperSlide className="text-white flex items-center justify-center">Slide 6</SwiperSlide>
@@ -126,7 +279,7 @@ function Body() {
         data-aos="fade-up"
         data-aos-duration="1000"
       >
-        <span className="self-center text-[4rem] font-bold font-[inter] pb-[1rem] bg-gradient-to-b from-[#B59410] to-[#3F3001] inline-block text-transparent bg-clip-text font-zyre">
+        <span className="self-center text-[4rem] font-bold  pb-[1rem] bg-gradient-to-b from-[#B59410] to-[#3F3001] inline-block text-transparent bg-clip-text font-zyre">
           About ZYRE
         </span>
         <p className="text-[#ffffff99] leading-8 text-center pb-[2rem] font-zyre ">
@@ -144,13 +297,18 @@ function Body() {
 
       {/* Video */}
       <div
-        className="h-screen flex items-center justify-center "
+        className="h-screen flex flex-col items-center justify-center "
         data-aos="fade-up"
         data-aos-duration="1000"
       >
-        <p className="text-white font-[2rem] bg-gradient-to-b from-[#B59410] to-[#3F3001] inline-block text-transparent bg-clip-text">
+        <p className="text-[4rem] pb-[2rem] font-zyre font-bold font-[2rem] bg-gradient-to-b from-[#B59410] to-[#3F3001] inline-block text-transparent bg-clip-text">
           Video
         </p>
+        <video
+          src="/zyre_demo.mp4"
+          className="h-[400px] w-[800px] rounded-lg shadow-md "
+          controls
+        ></video>
       </div>
       {/* Video */}
 
@@ -160,7 +318,7 @@ function Body() {
         data-aos="fade-up"
         data-aos-duration="1000"
       >
-        <span className=" font-[2rem] font-[inter] font-bold text-[4rem] bg-gradient-to-b from-[#B59410] to-[#3F3001] inline-block text-transparent bg-clip-text font-zyre">
+        <span className=" font-[2rem] pb-[2rem] font-zyre font-bold text-[4rem] bg-gradient-to-b from-[#B59410] to-[#3F3001] inline-block text-transparent bg-clip-text ">
           Solutions
         </span>
         <img src="/line.svg" alt="" />
@@ -273,19 +431,32 @@ function Body() {
         className="h-screen  px-[4rem] mt-[4rem] "
         data-aos="fade-up"
         data-aos-duration="1000"
-        
       >
-        
         {/* Image */}
         <div className="flex gap-[20rem]">
           <div>
-          <p
-          className="text-center font-bold text-[4rem] pb-[2rem] bg-gradient-to-b from-[#B59410] to-[#3F3001] inline-block text-transparent bg-clip-text font-zyre"
-          data-aos="fade-up"
-          data-aos-duration="1000"
-        >
-          Contact Us
-        </p>
+            <p
+              className="text-center font-bold text-[4rem] pb-[2rem] bg-gradient-to-b from-[#B59410] to-[#3F3001] inline-block text-transparent bg-clip-text font-zyre"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              For Enquiry
+            </p>
+            <div className="flex flex-col gap-[2rem]">
+              <p className="text-white">
+                Send a mail to{" "}
+                <span className="text-[#ffffff99] underline">
+                  zyrehomeautomations@gmail.com
+                </span>
+              </p>
+              <p className="text-white">
+                Call{" "}
+                <span className="text-[#ffffff99] underline">
+                  +918525928155
+                </span>{" "}
+                for more details{" "}
+              </p>
+            </div>
           </div>
           {/* Image */}
           {/* Inputs */}
