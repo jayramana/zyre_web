@@ -11,22 +11,24 @@ const Solutions = () => {
         <div className="flex justify-between items-center backdrop-blur-sm pt-[2rem] px-[2rem] fixed h-fit  w-[100%]">
           {/* Image */}
           <div>
-            <img src="/logo.png" alt="" className="h-[48px] " />
+            <a href="/">
+              <img src="/logo.png" alt="" className="h-[48px] " />
+            </a>
             {/* <p>Zyre</p> */}
           </div>
           <div>
             <ul className="flex gap-[4rem]">
               <div className="flex flex-col items-center">
                 <a href="/">
-                  <li className="text-white font-[inter] font-[500] hover:underline">
+                  <li className="text-white font-[inter] font-[500] hover:underline font-zyre">
                     Home
                   </li>
                 </a>
               </div>
-              <li className="text-white font-[inter] font-[500] hover:underline">
+              <li className="text-white font-[inter] font-[500] hover:underline font-zyre">
                 Company
               </li>
-              <li className="text-white font-[inter] font-[500] hover:underline">
+              <li className="text-white font-[inter] font-[500] hover:underline font-zyre">
                 <a href="/solutions">Solutions</a>
               </li>
             </ul>
@@ -38,7 +40,7 @@ const Solutions = () => {
       </div>
       {/* Nav-End */}
       <div className="bg-black text-white h-[100%] flex flex-col px-[4rem] py-[10rem]">
-        <p className="text-center font-bold text-[3rem] pb-[2rem] bg-gradient-to-b from-[#B59410] to-[#3F3001] inline-block text-transparent bg-clip-text">
+        <p className="text-center font-bold text-[3rem] pb-[2rem] bg-gradient-to-b from-[#B59410] to-[#3F3001] inline-block text-transparent bg-clip-text font-zyre">
           Solutions
         </p>
         <div className="flex">
@@ -48,71 +50,79 @@ const Solutions = () => {
               alt=""
               className="rounded-lg  w-[1000px] h-[200px] "
             />
-            <p className="text-center pt-[1rem]">Lighting Control</p>
           </div>
-          <p className="leading-[2rem] px-[2rem] text-justify pt-[1rem] text-[#ffffff99]">
-            Lighting control in home automation allows for the centralized
-            management of lights throughout a home. It enhances convenience,
-            energy efficiency, and security by enabling users to remotely
-            control lighting via smartphones or voice commands. Smart lighting
-            can be programmed to adjust brightness, change colors, or turn
-            on/off based on schedules or occupancy sensors. It also supports
-            integration with other smart devices, enabling scenes like{" "}
-            <strong>movie mode</strong> or goodnight where lights adjust
-            automatically. This technology helps reduce energy consumption and
-            adds a layer of personalization and ambiance to living spaces.
-          </p>
+          <div className="flex flex-col  items-start">
+            <p className=" font-zyre pl-[2rem]">Lighting Control</p>
+
+            <p className="leading-[2rem] px-[2rem] text-justify text-[#ffffff99] font-zyre">
+              Lighting control in home automation allows for the centralized
+              management of lights throughout a home. It enhances convenience,
+              energy efficiency, and security by enabling users to remotely
+              control lighting via smartphones or voice commands. Smart lighting
+              can be programmed to adjust brightness, change colors, or turn
+              on/off based on schedules or occupancy sensors. It also supports
+              integration with other smart devices, enabling scenes like{" "}
+              <strong>movie mode</strong> or goodnight where lights adjust
+              automatically. This technology helps reduce energy consumption and
+              adds a layer of personalization and ambiance to living spaces.
+            </p>
+          </div>
         </div>
-        <div className="flex ">
-          <p className="leading-[2rem] pr-[2rem] text-justify pt-[1rem] text-[#ffffff99]">
-            HVAC (Heating, Ventilation, and Air Conditioning) control in home
-            automation systems provides smart management of indoor climate. It
-            allows homeowners to remotely adjust temperature settings, humidity
-            levels, and air quality via smartphones, tablets, or voice commands.
-            Smart thermostats can learn user preferences and create
-            energy-efficient schedules, optimizing comfort while reducing energy
-            costs. Integration with other smart devices, such as occupancy
-            sensors, ensures that HVAC systems operate only when needed.
-            Additionally, smart HVAC control can provide real-time monitoring
-            and alerts for maintenance issues, enhancing system longevity and
-            efficiency. This technology promotes a comfortable,
-            energy-efficient, and eco-friendly living environment.
-          </p>
+        <div className="flex items-center ">
+          <div className="flex flex-col ">
+            <p className=" pt-[1rem] font-zyre">HVAC Control</p>
+            <p className="leading-[2rem] pr-[2rem] text-justify text-[#ffffff99] font-zyre">
+              HVAC (Heating, Ventilation, and Air Conditioning) control in home
+              automation systems provides smart management of indoor climate. It
+              allows homeowners to remotely adjust temperature settings,
+              humidity levels, and air quality via smartphones, tablets, or
+              voice commands. Smart thermostats can learn user preferences and
+              create energy-efficient schedules, optimizing comfort while
+              reducing energy costs. Integration with other smart devices, such
+              as occupancy sensors, ensures that HVAC systems operate only when
+              needed. Additionally, smart HVAC control can provide real-time
+              monitoring and alerts for maintenance issues, enhancing system
+              longevity and efficiency. This technology promotes a comfortable,
+              energy-efficient, and eco-friendly living environment.
+            </p>
+          </div>
           <div>
             <img
               src="/hvac.jpg"
               alt=""
               className="w-[1100px] h-[200px] rounded-lg border-[2px] border-white"
             />
-            <p className="text-center pt-[1rem]">HVAC Control</p>
           </div>
         </div>
-        <div className="flex">
+        <div className="flex items-center">
           <div className="flex flex-col">
             <img
               src="/av_control.jpg"
               alt=""
               className="h-[200px] w-[1240px] rounded-lg border-[2px] border-white"
             />
-            <p className="text-center pt-[1rem]">AV Control</p>
           </div>
-          <p className="leading-[2rem] px-[2rem] text-justify pt-[1rem] text-[#ffffff99]">
-            AV (Audio-Visual) control in home automation systems streamlines the
-            management of entertainment devices like TVs, speakers, projectors,
-            and media players. It allows users to control all AV equipment from
-            a single interface, such as a smartphone, tablet, or dedicated
-            remote, eliminating the need for multiple remotes. Smart AV systems
-            can integrate with voice assistants, enabling voice-activated
-            commands for playing music, changing channels, or adjusting volume.
-            Users can also set up scenes, like movie night, where lights dim,
-            curtains close, and the home theater system powers on with a single
-            tap or voice command. This technology enhances the home
-            entertainment experience, providing convenience, simplicity, and
-            customization.
-          </p>
+          <div className="flex flex-col">
+            <p className="pl-[2rem] font-zyre">AV Control</p>
+
+            <p className="leading-[2rem] px-[2rem] text-justify  text-[#ffffff99] font-zyre">
+              AV (Audio-Visual) control in home automation systems streamlines
+              the management of entertainment devices like TVs, speakers,
+              projectors, and media players. It allows users to control all AV
+              equipment from a single interface, such as a smartphone, tablet,
+              or dedicated remote, eliminating the need for multiple remotes.
+              Smart AV systems can integrate with voice assistants, enabling
+              voice-activated commands for playing music, changing channels, or
+              adjusting volume. Users can also set up scenes, like movie night,
+              where lights dim, curtains close, and the home theater system
+              powers on with a single tap or voice command. This technology
+              enhances the home entertainment experience, providing convenience,
+              simplicity, and customization.
+            </p>
+          </div>
         </div>
         <div className="flex">
-          <p className="leading-[2rem] pr-[2rem] text-justify pt-[1rem] text-[#ffffff99]">
+          <p className="leading-[2rem] pr-[2rem] text-justify pt-[1rem] text-[#ffffff99] font-zyre">
             Scheduling in home automation allows users to automate the operation
             of connected devices according to a predefined timetable. This
             feature enables smart devices such as lights, thermostats, HVAC
@@ -132,7 +142,9 @@ const Solutions = () => {
               alt=""
               className="w-[1200px] h-[200px] rounded-lg border-[2px] border-white"
             />
-            <p className="text-center pt-[1rem]">Scheduling Connection</p>
+            <p className="text-center pt-[1rem] font-zyre">
+              Scheduling Connection
+            </p>
           </div>
         </div>
         <div className="flex">
@@ -142,9 +154,11 @@ const Solutions = () => {
               alt=""
               className="rounded-lg border-[2px] border-white w-[1000px] h-[200px] "
             />
-            <p className="text-center pt-[1rem]">Mobile Connectivity</p>
+            <p className="text-center pt-[1rem] font-zyre">
+              Mobile Connectivity
+            </p>
           </div>
-          <p className="leading-[2rem] px-[2rem] text-justify pt-[1rem] text-[#ffffff99]">
+          <p className="leading-[2rem] px-[2rem] text-justify pt-[1rem] text-[#ffffff99] font-zyre">
             Mobile connectivity in home automation allows users to control and
             monitor their smart home devices from anywhere using a smartphone or
             tablet. Through dedicated mobile apps, homeowners can remotely
@@ -159,13 +173,13 @@ const Solutions = () => {
           </p>
         </div>
         <div className="flex">
-          <p className="leading-[2rem] px-[2rem] text-justify pt-[1rem] text-[#ffffff99]">
+          <p className="leading-[2rem] px-[2rem] text-justify pt-[1rem] text-[#ffffff99] font-zyre">
             speed control in home automation systems enhance comfort and energy
             efficiency by allowing precise management of lighting intensity and
             fan speeds through smartphone apps, voice commands, or automation
             schedules. These features can be integrated into scenes for seamless
-            transitions and customized settings to suit various needs
-            and preferences.
+            transitions and customized settings to suit various needs and
+            preferences.
           </p>
           <div className="flex flex-col">
             <img
@@ -173,7 +187,7 @@ const Solutions = () => {
               alt=""
               className="rounded-lg border-[2px] border-white w-[1000px] h-[200px] "
             />
-            <p className="text-center pt-[1rem]">Speed Control</p>
+            <p className="text-center pt-[1rem] font-zyre">Speed Control</p>
           </div>
         </div>
       </div>
