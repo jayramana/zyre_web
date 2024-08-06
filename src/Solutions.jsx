@@ -1,18 +1,27 @@
 // eslint-disable-next-line no-unused-vars
-import React from "react";
+import React, { useEffect } from "react";
 import { Button } from "./components/ui/button";
+import { FaFacebook } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { AiFillInstagram } from "react-icons/ai";
+import { IoLogoLinkedin } from "react-icons/io";
+import AOS from "aos";
+import "aos/dist/aos.css";
 // Mr.Godwin
 
 const Solutions = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <main>
       {/* Nav-Start */}
       <div>
-        <div className="flex justify-between items-center backdrop-blur-sm pt-[2rem] px-[2rem] fixed h-fit  w-[100%]">
+        <div className="flex justify-between items-center backdrop-blur-md pt-[2rem] px-[2rem] z-50 fixed h-fit  w-[100%]">
           {/* Image */}
           <div>
             <a href="/">
-              <img src="/logo.png" alt="" className="h-[48px] " />
+              <img src="/new_logo.png" alt="" className="h-[48px] " />
             </a>
             {/* <p>Zyre</p> */}
           </div>
@@ -26,7 +35,7 @@ const Solutions = () => {
                 </a>
               </div>
               <li className="text-white font-[inter] font-[500] hover:underline font-zyre">
-                Company
+                <a href="/products">Products</a>
               </li>
               <li className="text-white font-[inter] font-[500] hover:underline font-zyre">
                 <a href="/solutions">Solutions</a>
@@ -39,11 +48,11 @@ const Solutions = () => {
         </div>
       </div>
       {/* Nav-End */}
-      <div className="bg-black text-white h-[100%] flex flex-col px-[4rem] py-[10rem]">
+      <div className="bg-black text-white h-[100%] flex flex-col px-[4rem] py-[10rem] gap-[4rem]">
         <p className="text-center font-bold text-[3rem] pb-[2rem] bg-gradient-to-b from-[#B59410] to-[#3F3001] inline-block text-transparent bg-clip-text font-zyre">
           Solutions
         </p>
-        <div className="flex">
+        <div className="flex" data-aos="fade-up" data-aos-duration="1000">
           <div className="flex flex-col">
             <img
               src="/light_control.jpg"
@@ -62,13 +71,17 @@ const Solutions = () => {
               can be programmed to adjust brightness, change colors, or turn
               on/off based on schedules or occupancy sensors. It also supports
               integration with other smart devices, enabling scenes like{" "}
-              <strong>movie mode</strong> or goodnight where lights adjust
+              movie mode or goodnight where lights adjust
               automatically. This technology helps reduce energy consumption and
               adds a layer of personalization and ambiance to living spaces.
             </p>
           </div>
         </div>
-        <div className="flex items-center ">
+        <div
+          className="flex items-center "
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
           <div className="flex flex-col ">
             <p className=" pt-[1rem] font-zyre">HVAC Control</p>
             <p className="leading-[2rem] pr-[2rem] text-justify text-[#ffffff99] font-zyre">
@@ -90,19 +103,23 @@ const Solutions = () => {
             <img
               src="/hvac.jpg"
               alt=""
-              className="w-[1100px] h-[200px] rounded-lg border-[2px] border-white"
+              className="w-[1100px] h-[200px] rounded-lg "
             />
           </div>
         </div>
-        <div className="flex items-center">
-          <div className="flex flex-col">
+        <div className="flex items-center" data-aos="fade-up"
+            data-aos-duration="1000">
+          <div className="flex flex-col" >
             <img
               src="/av_control.jpg"
               alt=""
-              className="h-[200px] w-[1240px] rounded-lg border-[2px] border-white"
+              className="h-[200px] w-[1240px] rounded-lg "
             />
           </div>
-          <div className="flex flex-col">
+          <div
+            className="flex flex-col"
+            
+          >
             <p className="pl-[2rem] font-zyre">AV Control</p>
 
             <p className="leading-[2rem] px-[2rem] text-justify  text-[#ffffff99] font-zyre">
@@ -121,7 +138,7 @@ const Solutions = () => {
             </p>
           </div>
         </div>
-        <div className="flex">
+        <div className="flex" data-aos="fade-up" data-aos-duration="1000">
           <p className="leading-[2rem] pr-[2rem] text-justify pt-[1rem] text-[#ffffff99] font-zyre">
             Scheduling in home automation allows users to automate the operation
             of connected devices according to a predefined timetable. This
@@ -140,19 +157,19 @@ const Solutions = () => {
             <img
               src="/schedule.jpg"
               alt=""
-              className="w-[1200px] h-[200px] rounded-lg border-[2px] border-white"
+              className="w-[1200px] h-[200px] rounded-lg "
             />
             <p className="text-center pt-[1rem] font-zyre">
               Scheduling Connection
             </p>
           </div>
         </div>
-        <div className="flex">
+        <div className="flex" data-aos="fade-up" data-aos-duration="1000">
           <div className="flex flex-col">
             <img
               src="/light_control.jpg"
               alt=""
-              className="rounded-lg border-[2px] border-white w-[1000px] h-[200px] "
+              className="rounded-lg  w-[1200px] h-[200px] "
             />
             <p className="text-center pt-[1rem] font-zyre">
               Mobile Connectivity
@@ -172,9 +189,9 @@ const Solutions = () => {
             responses to unexpected events or emergencies.
           </p>
         </div>
-        <div className="flex">
-          <p className="leading-[2rem] px-[2rem] text-justify pt-[1rem] text-[#ffffff99] font-zyre">
-            speed control in home automation systems enhance comfort and energy
+        <div className="flex" data-aos="fade-up" data-aos-duration="1000">
+          <p className="leading-[2rem] px-[2rem] text-justify pt-[1rem] text-[#ffffff99] font-zyre" >
+            Speed control in home automation systems enhance comfort and energy
             efficiency by allowing precise management of lighting intensity and
             fan speeds through smartphone apps, voice commands, or automation
             schedules. These features can be integrated into scenes for seamless
@@ -185,11 +202,153 @@ const Solutions = () => {
             <img
               src="/light_control.jpg"
               alt=""
-              className="rounded-lg border-[2px] border-white w-[1000px] h-[200px] "
+              className="rounded-lg  w-[600px] h-[200px] "
             />
             <p className="text-center pt-[1rem] font-zyre">Speed Control</p>
           </div>
         </div>
+      </div>
+      {/* Footer */}
+      <div className="bg-black flex-col h-[80vh] ">
+        {/* One */}
+        <section className="flex pl-[6rem] gap-[2rem]">
+          <section className="flex flex-col gap-[2rem] p-[2rem]">
+            <div>
+              <img src="/new_logo.png" alt="" />
+            </div>
+            <div className="flex gap-[2rem] items-center">
+              <span className="text-white font-bold font-zyre">
+                Follow us on
+              </span>
+              <div className="flex gap-[.4rem]">
+                <FaFacebook className="text-xl text-[#ffffff99]" />
+                <FaXTwitter className="text-xl text-[#ffffff99]" />
+                <AiFillInstagram className="text-xl text-[#ffffff99]" />
+                <IoLogoLinkedin className="text-xl text-[#ffffff99]" />
+              </div>
+            </div>
+            <div>
+              <p className="text-white font-bold font-zyre">Address</p>
+              <p className="text-[#ffffff99] font-zyre">
+                NO 1,Vijaya nagar,Mgr Salai, <br /> Neyveli,Cuddalore.
+              </p>
+            </div>
+          </section>
+          {/* One */}
+          {/* Two */}
+          <section className="flex flex-col gap-[4rem] pt-[4rem] pb-[2rem] pl-[2rem] pr-[2rem]">
+            <div>
+              <p className="text-white font-bold font-zyre">Quick Links</p>
+              <ul>
+                <li className="text-[#ffffff99] hover:text-white cursor-pointer font-zyre">
+                  <a href="/">Home</a>
+                </li>
+                <li className="text-[#ffffff99] hover:text-white cursor-pointer font-zyre">
+                  Company
+                </li>
+                <li className="text-[#ffffff99] hover:text-white cursor-pointer font-zyre">
+                  <a href="/solutions">Products</a>
+                </li>
+                <li className="text-[#ffffff99] hover:text-white cursor-pointer font-zyre">
+                  Contact
+                </li>
+              </ul>
+            </div>
+            <div className="flex flex-col">
+              <span className="text-white font-bold font-zyre">E-mail </span>
+              <span className="text-[#ffffff99] font-zyre">
+                zyrehomeautomation@gmail.com
+              </span>
+            </div>
+            <div className="flex flex-col">
+              <span className="text-white font-bold font-zyre">
+                Phone Number
+              </span>
+              <span className="text-[#ffffff99] font-zyre">+91 8525928155</span>
+            </div>
+          </section>
+
+          {/* Two */}
+          {/* Threee */}
+          <section className="flex flex-col gap-[5rem] pt-[4rem] pb-[2rem] pl-[2rem] pr-[2rem]">
+            <div>
+              <span className="text-white font-bold font-zyre">
+                Home Automation
+              </span>
+              <ul className="text-[#ffffff99]">
+                <li className="hover:text-white cursor-pointer font-zyre">
+                  Light control
+                </li>
+                <li className="hover:text-white cursor-pointer font-zyre">
+                  HVAC control
+                </li>
+                <li className="hover:text-white cursor-pointer font-zyre">
+                  Voice control
+                </li>
+                <li className="hover:text-white cursor-pointer font-zyre">
+                  Mobile Connectivity
+                </li>
+              </ul>
+            </div>
+            <div>
+              <span className="font-bold text-white font-zyre">Industries</span>
+
+              <ul className="text-[#ffffff99]">
+                <li className="hover:text-white cursor-pointer font-zyre">
+                  Motors
+                </li>
+                <li className="hover:text-white cursor-pointer font-zyre">
+                  HVAC control
+                </li>
+                <li className="hover:text-white cursor-pointer font-zyre">
+                  Dryers
+                </li>
+              </ul>
+            </div>
+          </section>
+          {/* Three */}
+          {/* Fourth*/}
+          <section className="flex flex-col  pt-[4rem] pb-[2rem] pl-[8rem] pr-[2rem]">
+            <span className="text-white font-bold font-zyre">
+              Stores and Malls
+            </span>
+            <ul className="text-[#ffffff99]">
+              <li className="hover:text-white cursor-pointer font-zyre">
+                AV control
+              </li>
+              <li className="hover:text-white cursor-pointer font-zyre">
+                Automation and Scheduling
+              </li>
+              <li className="hover:text-white cursor-pointer font-zyre">
+                Diming and Speed control
+              </li>
+            </ul>
+          </section>
+          {/*Fourth */}
+        </section>
+        <section>
+          <img src="/line.svg" alt="" className="w-[90%] pl-[8rem]" />
+          <div className="flex pt-[1rem] pl-[8rem]">
+            <div className=" flex gap-[10rem]">
+              <span className="text-[#ffffff99] font-zyre">
+                Developed by John Doe and John Doe
+              </span>
+              <span className="text-[#ffffff99] font-zyre">
+                Copyright &copy; 2024 Zyre Home Automations All rights reserved
+              </span>
+            </div>
+            <div className="pl-[8rem] flex gap-[.5rem]">
+              <a href="terms" rel="external nofollow noopener" target="_blank">
+                <span className="text-[#ffffff99] hover:text-white font-zyre">
+                  Terms and Conditions
+                </span>
+              </a>
+              <span className="text-[#ffffff99] hover:text-white font-zyre">
+                Privacy Policy
+              </span>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
   );

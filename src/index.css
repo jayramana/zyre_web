@@ -1,7 +1,7 @@
 @layer base {
     @font-face {
       font-family: "zyrefont";
-      src: url("/public/fonts/Copperplate_Gothic_Bold_Regular.ttf") format("truetype");
+      src: url("/public/fonts/ARIAL.TTF") format("truetype");
     }
   }
   

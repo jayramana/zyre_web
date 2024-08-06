@@ -33,13 +33,13 @@ function Body() {
       {/* Nav-Start */}
       <div
         className={`flex justify-between items-center p-[2rem] z-50 fixed w-[100%]
-        backdrop-blur-sm pt-[2rem] px-[2rem]
+        backdrop-blur-md pt-[2rem] px-[2rem]
         `}
       >
         {/* Image */}
         <div>
           <a href="/">
-            <img src="/logo.png" alt="" className="h-[48px] " />
+            <img src="/new_logo.png" alt="" className="h-[48px] " />
           </a>
           {/* <p>Zyre</p> */}
         </div>
@@ -52,12 +52,12 @@ function Body() {
                 </li>
               </a>
             </div>
-            <a href="/company">
+            {/* <a href="/company">
               <li className="text-white font-[inter] font-[500] hover:underline font-zyre">
                 Company
               </li>
-            </a>
-            <a href="/company">
+            </a> */}
+            <a href="/products">
               <li className="text-white font-[inter] font-[500] hover:underline font-zyre">
                 Products
               </li>
@@ -270,25 +270,22 @@ function Body() {
 
       {/* Feedback */}
       <div
-        className="h-screen  px-[4rem] "
+        className="h-screen  px-[4rem] mt-[4rem] "
         data-aos="fade-up"
         data-aos-duration="1000"
+        
       >
-        <p
+        
+        {/* Image */}
+        <div className="flex gap-[20rem]">
+          <div>
+          <p
           className="text-center font-bold text-[4rem] pb-[2rem] bg-gradient-to-b from-[#B59410] to-[#3F3001] inline-block text-transparent bg-clip-text font-zyre"
           data-aos="fade-up"
           data-aos-duration="1000"
         >
-          Give us your feedback/Contact Us
+          Contact Us
         </p>
-        {/* Image */}
-        <div className="flex gap-[20rem]">
-          <div>
-            <img
-              src="/feedback.jpg"
-              alt="3d"
-              className="w-[500px] h-[500px] rounded-lg "
-            />
           </div>
           {/* Image */}
           {/* Inputs */}
@@ -321,7 +318,7 @@ function Body() {
         <section className="flex pl-[6rem] gap-[2rem]">
           <section className="flex flex-col gap-[2rem] p-[2rem]">
             <div>
-              <img src="/logo.png" alt="" />
+              <img src="/new_logo.png" alt="" />
             </div>
             <div className="flex gap-[2rem] items-center">
               <span className="text-white font-bold font-zyre">

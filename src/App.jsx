@@ -5,8 +5,7 @@ import Body from './Body'
 import Terms from './Terms'
 import Solutions from './Solutions'
 import ImageSlide from './ImageSlide'
-import Company from './Company'
-
+import Products from './Products'
 
 const App = () => {
   return (
@@ -16,7 +15,7 @@ const App = () => {
         <Route path='/terms' element={<Terms />}></Route>
         <Route path='/solutions' element={<Solutions />} />
         <Route path='/image' element={<ImageSlide />} />
-        <Route path='/company' element={<Company/>} />
+        <Route path='/products' element={<Products/>} />
       </Routes>
     </Router>
   )
