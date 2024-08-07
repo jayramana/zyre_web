@@ -4,7 +4,21 @@
       src: url("/public/fonts/ARIAL.TTF") format("truetype");
     }
   }
+
+  .txt {
+    text-decoration: none;
+    background: linear-gradient(currentColor, currentColor) bottom / 0 .1em no-repeat;
+    transition: .5s background-size;
+  }
   
+  .txt:hover {
+    background-size: 100% .1em;
+  }
+  
+  /* Variations */
+  .txt.left {
+    background-position: left bottom;
+  }
 
 
 @tailwind base;

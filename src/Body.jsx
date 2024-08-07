@@ -1,39 +1,56 @@
 /* eslint-disable no-unused-vars */
 import { Button } from "@/components/ui/button";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { FaFacebook } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { AiFillInstagram } from "react-icons/ai";
 import { IoLogoLinkedin } from "react-icons/io";
-import { useRef } from "react";
-import Talos from "./Talos";
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
+import "./index.css";
+import { GoChevronLeft, GoChevronRight } from "react-icons/go";
 
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-// import required modules
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
-import { motion } from "framer-motion";
-// B59410
-// 3F3001
 function Body() {
+  const switches = ["8 Switches", "4 Switches", "2 Switches"];
+  const connect = "Wi-Fi";
+  const voice = "Google,Siri";
+  const img = ["8switch_new.png", "4gray_new.png", "2switch_new.png"];
+  const color = ["White", "Silver", "Black"];
   useEffect(() => {
     AOS.init();
   }, []);
+  const bottomRef = useRef(null);
+  let [i, setI] = useState(0);
+
+  const Change_Props = () => {
+    if (i < 2) {
+      i += 1;
+      setI(i);
+    } else {
+      setI(0);
+    }
+    console.log(i);
+  };
+  const Sub_Props = () => {
+    if (i > 0) {
+      i -= 1;
+      setI(i);
+    } else if (i == 0) {
+      setI(0);
+    }
+  };
+  const scrollToBottom = () => {
+    bottomRef.current.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <main className=" h-[100%] bg-gradient-to-b from-[#000000] to-[#403E3A] ">
       {/* Nav-Start */}
       <div
         className={`flex justify-between items-center  z-50 fixed w-[100%]
-        backdrop-blur-md pt-[2rem] px-[2rem]
+        backdrop-blur-md pt-[2rem] px-[2rem] pb-[1rem]
         `}
       >
         {/* Image */}
@@ -47,9 +64,8 @@ function Body() {
           <ul className="flex gap-[4rem]">
             <div>
               <a href="/">
-                <li className="text-white font-[inter] font-[500]  font-zyre">
+                <li className="text-white txt left font-[500] txt left font-zyre ">
                   Home
-                  <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-white"></span>
                 </li>
               </a>
             </div>
@@ -59,19 +75,21 @@ function Body() {
               </li>
             </a> */}
             <a href="/products">
-              <li className="text-white font-[inter] font-[500] hover:underline font-zyre">
+              <li className="text-white font-[500] txt left font-zyre">
                 Products
               </li>
             </a>
             <a href="/solutions">
-              <li className="text-white font-[inter] font-[500] hover:underline font-zyre">
+              <li className="text-white  font-[500] txt left font-zyre">
                 Solutions
               </li>
             </a>
           </ul>
         </div>
         <div>
-          <Button variant="outline">Contact Us</Button>
+          <Button variant="outline" onClick={scrollToBottom}>
+            Contact Us
+          </Button>
         </div>
       </div>
       {/* Nav-End */}
@@ -79,11 +97,8 @@ function Body() {
       {/* Home-Start */}
       <div className="h-screen  pt-[6rem] pb-[4rem]  ">
         <img src="/home.svg" alt="" className="w-[100%] h-auto relative" />
-        <div className="absolute top-[70%] left-[25%] font-[550]">
-          <p className="text-white z-50 text-[3rem]">
-            Welcome to Zyre Home Automations
-          </p>
-          <p className="text-white text-xl">Live Smart</p>
+        <div className="absolute top-[68%] left-[27%] font-[550]">
+          <p className="text-white z-50 text-[4rem]">Zyre Home Automations</p>
         </div>
       </div>
 
@@ -91,184 +106,42 @@ function Body() {
 
       {/* Image slide */}
       <div
-        className="h-screen flex items-center justify-center mt-[20rem] px-[4rem]"
+        className="h-screen flex pt-[2rem] justify-center mt-[20rem] px-[8rem]"
         data-aos="fade-up"
         data-aos-duration="1000"
       >
-        <Swiper
-          spaceBetween={30}
-          centeredSlides={true}
-          // autoplay={{
-          //   delay: 2500,
-          //   disableOnInteraction: false,
-          // }}
-          pagination={{
-            clickable: true,
-          }}
-          navigation={true}
-          modules={[Pagination, Navigation]}
-          className="flex h-screen"
-        >
-          <SwiperSlide className=" flex items-center justify-center">
-            <div className="flex gap-[2rem]">
-              <img
-                src="/2switch_new.png"
-                alt=""
-                className="rounded-md object-contain "
-              />
-              {/* <div className="mr-[3.5rem]"> */}
-              {/* <p className="bg-gradient-to-b from-[#B59410] to-[#3F3001] inline-block text-transparent bg-clip-text font-zyre text-[1.5rem]">
-                Product Details
-              </p> */}
-              {/* <div className="flex flex-col gap-[1rem]">
-                <div className="flex gap-[1rem]">
-                  <p className="text-white font-zyre">Connections</p>
-                  <p className="text-white font-zyre">:</p>
-                  <p className="text-white font-zyre">2 Switchs</p>
-                </div>
-                <div className="flex gap-[1rem]">
-                  <p className="text-white font-zyre">Module Connectivity</p>
-                  <p className="text-white font-zyre">:</p>
-                  <p className="text-white font-zyre">Wi-fi</p>
-                </div>
-                <div className="flex gap-[1rem]">
-                  <p className="text-white font-zyre">
-                    Voice Assitant(s)
-                  </p>
-                  <p className="text-white font-zyre">:</p>
-                  <p className="text-white font-zyre">Google, Siri</p>
-                </div>
-              </div> */}
-              {/* </div> */}
-              <div>
-                <p className="text-white text-2xl">2 Switch Box</p>
-                <div>
-                  <p className="border-[2px] border-white rounded-md text-white border-solid inline-block px-[4px] py-[2px] text-xs">
-                    2 Switchs
-                  </p>
-                  <p className="border-[2px] border-white rounded-md text-white border-solid inline-block px-[4px] py-[2px] text-xs">
-                    Wi-Fi
-                  </p>
-                  <p className="border-[2px] border-white rounded-md text-white border-solid inline-block px-[4px] py-[2px] text-xs">
-                    Google,Siri
-                  </p>
-                </div>
+        <GoChevronLeft
+          className="text-white self-center text-4xl"
+          onClick={Sub_Props}
+        />
+        <div className=" flex items-center justify-center px-[4rem] pt-[4rem]">
+          <div className="flex  justify-center shadow-2xl shadow-[#B59410] rounded-lg px-[4rem] py-[2rem]">
+            <img
+              src={img[i]}
+              alt=""
+              className="rounded-md object-contain h-[350px] w-[350px] ml-[10rem] mb-[5rem] mt-[4rem]"
+            />
+
+            <div className="duration-all ">
+              <p className="text-white text-2xl pb-[.3rem]">{switches[i]}</p>
+              <div className="flex gap-[1rem]">
+                <p className="border-[2px] border-white rounded-md text-white border-solid inline-block px-[4px] py-[2px] text-xs">
+                  {color[i]}
+                </p>
+                <p className="border-[2px] border-white rounded-md text-white border-solid inline-block px-[4px] py-[2px] text-xs">
+                  Wi-Fi
+                </p>
+                <p className="border-[2px] border-white rounded-md text-white border-solid inline-block px-[4px] py-[2px] text-xs">
+                  Google,Siri
+                </p>
               </div>
             </div>
-          </SwiperSlide>
-          <SwiperSlide className=" flex items-center justify-center">
-            <div className="flex gap-[2rem]">
-              <img
-                src="/2switch.jpg"
-                alt=""
-                className="rounded-md object-contain "
-              />
-              {/* <div className="mr-[3.5rem]"> */}
-              {/* <p className="bg-gradient-to-b from-[#B59410] to-[#3F3001] inline-block text-transparent bg-clip-text font-zyre text-[1.5rem]">
-                Product Details
-              </p> */}
-              {/* <div className="flex flex-col gap-[1rem]">
-                <div className="flex gap-[1rem]">
-                  <p className="text-white font-zyre">Connections</p>
-                  <p className="text-white font-zyre">:</p>
-                  <p className="text-white font-zyre">2 Switchs</p>
-                </div>
-                <div className="flex gap-[1rem]">
-                  <p className="text-white font-zyre">Module Connectivity</p>
-                  <p className="text-white font-zyre">:</p>
-                  <p className="text-white font-zyre">Wi-fi</p>
-                </div>
-                <div className="flex gap-[1rem]">
-                  <p className="text-white font-zyre">
-                    Voice Assitant(s)
-                  </p>
-                  <p className="text-white font-zyre">:</p>
-                  <p className="text-white font-zyre">Google, Siri</p>
-                </div>
-              </div> */}
-              {/* </div> */}
-              <div>
-                <p className="text-white text-2xl">4 Switch Box</p>
-                <div>
-                  <p className="border-[2px] border-white rounded-md text-white border-solid inline-block px-[4px] py-[2px] text-xs">
-                    4 Switchs
-                  </p>
-                  <p className="border-[2px] border-white rounded-md text-white border-solid inline-block px-[4px] py-[2px] text-xs">
-                    Wi-Fi
-                  </p>
-                  <p className="border-[2px] border-white rounded-md text-white border-solid inline-block px-[4px] py-[2px] text-xs">
-                    Google,Siri
-                  </p>
-                  <p className="border-[2px] border-white rounded-md text-white border-solid inline-block px-[4px] py-[2px] text-xs">
-                    1 Year
-                  </p>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide className=" flex items-center justify-center">
-            <div className="flex gap-[2rem]">
-              <img
-                src="/2switch.jpg"
-                alt=""
-                className="rounded-md object-contain "
-              />
-              {/* <div className="mr-[3.5rem]"> */}
-              {/* <p className="bg-gradient-to-b from-[#B59410] to-[#3F3001] inline-block text-transparent bg-clip-text font-zyre text-[1.5rem]">
-                Product Details
-              </p> */}
-              {/* <div className="flex flex-col gap-[1rem]">
-                <div className="flex gap-[1rem]">
-                  <p className="text-white font-zyre">Connections</p>
-                  <p className="text-white font-zyre">:</p>
-                  <p className="text-white font-zyre">2 Switchs</p>
-                </div>
-                <div className="flex gap-[1rem]">
-                  <p className="text-white font-zyre">Module Connectivity</p>
-                  <p className="text-white font-zyre">:</p>
-                  <p className="text-white font-zyre">Wi-fi</p>
-                </div>
-                <div className="flex gap-[1rem]">
-                  <p className="text-white font-zyre">
-                    Voice Assitant(s)
-                  </p>
-                  <p className="text-white font-zyre">:</p>
-                  <p className="text-white font-zyre">Google, Siri</p>
-                </div>
-              </div> */}
-              {/* </div> */}
-              <div>
-                <p className="text-white text-2xl">8 Switch Box</p>
-                <div>
-                  <p className="border-[2px] border-white rounded-md text-white border-solid inline-block px-[4px] py-[2px] text-xs">
-                    8 Switchs
-                  </p>
-                  <p className="border-[2px] border-white rounded-md text-white border-solid inline-block px-[4px] py-[2px] text-xs">
-                    Wi-Fi
-                  </p>
-                  <p className="border-[2px] border-white rounded-md text-white border-solid inline-block px-[4px] py-[2px] text-xs">
-                    Google,Siri
-                  </p>
-                  <p className="border-[2px] border-white rounded-md text-white border-solid inline-block px-[4px] py-[2px] text-xs">
-                    1 Year
-                  </p>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-          {/* <SwiperSlide className="text-white flex items-center justify-center">
-            <img src="/4gray.jpg" alt="" className="rounded-md" />
-          </SwiperSlide>
-          <SwiperSlide className="text-white flex items-center justify-center">
-            <img src="/8switch.jpg" alt="" className="rounded-md" />
-          </SwiperSlide> */}
-          {/* <SwiperSlide className="text-white flex items-center justify-center">Slide 4</SwiperSlide>
-          <SwiperSlide className="text-white flex items-center justify-center">Slide 5</SwiperSlide>
-          <SwiperSlide className="text-white flex items-center justify-center">Slide 6</SwiperSlide>
-          <SwiperSlide className="text-white flex items-center justify-center">Slide 7</SwiperSlide>
-          <SwiperSlide className="text-white flex items-center justify-center">Slide 8</SwiperSlide>
-          <SwiperSlide className="text-white flex items-center justify-center">Slide 9</SwiperSlide> */}
-        </Swiper>
+          </div>
+        </div>
+        <GoChevronRight
+          className="text-white self-center text-4xl"
+          onClick={Change_Props}
+        />
       </div>
       {/* Image slide */}
 
@@ -302,11 +175,11 @@ function Body() {
         data-aos-duration="1000"
       >
         <p className="text-[4rem] pb-[2rem] font-zyre font-bold font-[2rem] bg-gradient-to-b from-[#B59410] to-[#3F3001] inline-block text-transparent bg-clip-text">
-          Video
+          Demo Video
         </p>
         <video
           src="/zyre_demo.mp4"
-          className="h-[400px] w-[800px] rounded-lg shadow-md "
+          className="h-[400px] w-[1200px] rounded-lg shadow-2xl shadow-[#B59410]"
           controls
         ></video>
       </div>
@@ -323,20 +196,35 @@ function Body() {
         </span>
         <img src="/line.svg" alt="" />
         <div className="flex flex-col justify-center  ">
-          <section className="flex gap-[12rem] items-center py-[2rem]">
-            <div className="flex ">
-              <p className="text-white text-xl font-zyre">Home Automation</p>
-            </div>
-            <ul className="text-white list-disc ">
-              <li className="text-[#ffffff99] font-zyre">Light control</li>
-              <li className="text-[#ffffff99] font-zyre">HVAC control</li>
-              <li className="text-[#ffffff99] font-zyre">Voice control</li>
-              <li className="text-[#ffffff99] font-zyre">
-                Mobile Connectivity
-              </li>
-              <li className="text-[#ffffff99] font-zyre">Kitchen Appliances</li>
-            </ul>
-          </section>
+          <div className="flex gap-[15rem]">
+            <section className="flex gap-[12rem] items-center py-[2rem]">
+              <div className="flex ">
+                <p className="text-white text-xl font-zyre">Home Automation</p>
+              </div>
+              <ul className="text-white list-disc ">
+                <li className="text-[#ffffff99] font-zyre">Light control</li>
+                <li className="text-[#ffffff99] font-zyre">HVAC control</li>
+                <li className="text-[#ffffff99] font-zyre">Voice control</li>
+                <li className="text-[#ffffff99] font-zyre">
+                  Mobile Connectivity
+                </li>
+                <li className="text-[#ffffff99] font-zyre">
+                  Kitchen Appliances
+                </li>
+              </ul>
+            </section>
+            <section className="flex gap-[12rem] items-center py-[2rem]">
+              <div className="flex ">
+                <p className="text-white text-xl font-zyre">Security Systems</p>
+              </div>
+              <ul className="text-white list-disc ">
+                <li className="text-[#ffffff99] font-zyre">Smart Cameras</li>
+                <li className="text-[#ffffff99] font-zyre">Door Locks</li>
+                <li className="text-[#ffffff99] font-zyre">Motion Sensors</li>
+                <li className="text-[#ffffff99] font-zyre">Alarm Systems</li>
+              </ul>
+            </section>
+          </div>
           <img src="/line.svg" alt="" />
           <section className="flex gap-[12rem] items-center py-[2rem]">
             <div>
@@ -376,7 +264,7 @@ function Body() {
           Customer Feedback
         </p>
         <div className="flex gap-[2rem] font-zyre">
-          <div className="bg-[#000] text-white p-[2rem] rounded-lg w-fit flex flex-col justify-between ">
+          <div className="bg-[#000] text-white p-[2rem] rounded-lg w-fit flex flex-col justify-between  transition-all duration-[500ms] hover:translate-y-[-10px]">
             <p className="leading-[2rem] text-sm text-justify">
               Upon acquiring the Zyre Automation Kit, my professional routine
               transformed into a highly efficient operation. This innovative
@@ -389,7 +277,7 @@ function Body() {
               <span className="text-xs text-[#ffffff99]">Shop Owner</span>
             </div>
           </div>
-          <div className="bg-[#000] text-white p-[2rem] rounded-lg w-fit  flex flex-col justify-between">
+          <div className="bg-[#000] text-white p-[2rem] rounded-lg w-fit transition-all duration-[500ms] flex flex-col justify-between  hover:translate-y-[-10px]">
             <p className="leading-[2rem] text-sm ">
               I had the Zyre Home Automation Kit installed, and it was a
               seamless process handled by professional technicians. The pricing
@@ -404,7 +292,7 @@ function Body() {
               <span className="text-xs text-[#ffffff99]">House Owner</span>
             </div>
           </div>
-          <div className="bg-[#000] text-white p-[2rem] rounded-lg w-fit  flex flex-col justify-between">
+          <div className="bg-[#000] text-white p-[2rem] rounded-lg w-fit  flex flex-col  transition-all duration-[500ms] justify-between  hover:translate-y-[-10px]">
             <p className="leading-[2rem] text-sm ">
               We installed the Zyre Home Automation Kit in our office. The
               installation was quick and professional. The system is reasonably
@@ -426,56 +314,62 @@ function Body() {
       </div>
       {/* Customer FeedBack */}
 
-      {/* Feedback */}
-      <div
-        className="h-screen  px-[4rem] mt-[4rem] "
-        data-aos="fade-up"
-        data-aos-duration="1000"
-      >
-        {/* Image */}
-        <div className="flex gap-[20rem]">
-          <div>
-            <p
-              className="text-center font-bold text-[4rem] pb-[2rem] bg-gradient-to-b from-[#B59410] to-[#3F3001] inline-block text-transparent bg-clip-text font-zyre"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-            >
-              For Enquiry
-            </p>
-            <div className="flex flex-col gap-[2rem]">
-              <p className="text-white">
-                Send a mail to{" "}
-                <span className="text-[#ffffff99] underline">
-                  zyrehomeautomations@gmail.com
-                </span>
+      <div ref={bottomRef}>
+        {/* Feedback */}
+        <div
+          className="h-screen  px-[4rem] mt-[20rem] "
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          {/* Image */}
+          <div className="flex gap-[20rem]">
+            <div>
+              <p
+                className="text-center font-bold text-[4rem] pb-[2rem] bg-gradient-to-b from-[#B59410] to-[#3F3001] inline-block text-transparent bg-clip-text font-zyre"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+              >
+                For Enquiry
               </p>
-              <p className="text-white">
-                Call{" "}
-                <span className="text-[#ffffff99] underline">
-                  +918525928155
-                </span>{" "}
-                for more details{" "}
-              </p>
+              <div className="flex flex-col gap-[2rem]">
+                <p className="text-white">
+                  Send a mail to{" "}
+                  <span className="text-[#ffffff99] underline">
+                    zyrehomeautomations@gmail.com
+                  </span>
+                </p>
+                <p className="text-white">
+                  Call{" "}
+                  <span className="text-[#ffffff99] underline">
+                    +918525928155
+                  </span>{" "}
+                  for more details{" "}
+                </p>
+              </div>
+            </div>
+            {/* Image */}
+            {/* Inputs */}
+            <div className="flex flex-col gap-[2rem] pt-[2rem]">
+              <section className="flex gap-[1rem]">
+                <Input type="text" placeholder="Name" className="w-[300px]" />
+                <Input type="email" placeholder="Email" className="w-[300px]" />
+              </section>
+              <section className="flex gap-[1rem]">
+                <Input
+                  type="tel"
+                  placeholder="Telephone"
+                  className="w-[300px]"
+                />
+                <Input type="text" placeholder="City" className="w-[300px]" />
+              </section>
+              <Textarea placeholder="Address" />
+              <Button type="submit" variant="outline" className="w-fit flex">
+                Submit
+              </Button>
             </div>
           </div>
-          {/* Image */}
           {/* Inputs */}
-          <div className="flex flex-col gap-[2rem] pt-[2rem]">
-            <section className="flex gap-[1rem]">
-              <Input type="text" placeholder="Name" className="w-[300px]" />
-              <Input type="email" placeholder="Email" className="w-[300px]" />
-            </section>
-            <section className="flex gap-[1rem]">
-              <Input type="tel" placeholder="Telephone" className="w-[300px]" />
-              <Input type="text" placeholder="City" className="w-[300px]" />
-            </section>
-            <Textarea placeholder="Address" />
-            <Button type="submit" variant="outline" className="w-fit flex">
-              Submit
-            </Button>
-          </div>
         </div>
-        {/* Inputs */}
       </div>
       {/* Feedback */}
 
@@ -625,7 +519,6 @@ function Body() {
           </div>
         </section>
       </div>
-      <Talos />
       {/* Footer */}
     </main>
   );
