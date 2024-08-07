@@ -294,9 +294,9 @@ const Products = () => {
         <section>
           <img src="/line.svg" alt="" className="w-[90%] pl-[8rem]" />
           <div className="flex pt-[1rem] pl-[8rem]">
-            <div className=" flex gap-[10rem]">
+            <div className=" flex gap-[6rem]">
               <span className="text-[#ffffff99] font-zyre">
-                Developed by John Doe and John Doe
+                Developed by Jayramana S and Vigneshwaran R{" "}
               </span>
               <span className="text-[#ffffff99] font-zyre">
                 Copyright &copy; 2024 Zyre Home Automations All rights reserved

@@ -116,13 +116,18 @@ function Body() {
         />
         <div className=" flex items-center justify-center px-[4rem] pt-[4rem]">
           <div className="flex  justify-center shadow-2xl shadow-[#B59410] rounded-lg px-[4rem] py-[2rem]">
-            <img
-              src={img[i]}
-              alt=""
-              className="rounded-md object-contain h-[350px] w-[350px] ml-[10rem] mb-[5rem] mt-[4rem]"
-            />
+            <a
+              href="/products
+           "
+            >
+              <img
+                src={img[i]}
+                alt=""
+                className="rounded-md object-contain h-[350px] w-[350px] ml-[10rem] mb-[5rem] mt-[4rem]"
+              />
+            </a>
 
-            <div className="duration-all ">
+            <div className="duration-all">
               <p className="text-white text-2xl pb-[.3rem]">{switches[i]}</p>
               <div className="flex gap-[1rem]">
                 <p className="border-[2px] border-white rounded-md text-white border-solid inline-block px-[4px] py-[2px] text-xs">
@@ -498,9 +503,9 @@ function Body() {
         <section>
           <img src="/line.svg" alt="" className="w-[90%] pl-[8rem]" />
           <div className="flex pt-[1rem] pl-[8rem]">
-            <div className=" flex gap-[10rem]">
+            <div className=" flex gap-[6rem]">
               <span className="text-[#ffffff99] font-zyre">
-                Developed by John Doe and John Doe
+                Developed by Jayramana S and Vigneshwaran R
               </span>
               <span className="text-[#ffffff99] font-zyre">
                 Copyright &copy; 2024 Zyre Home Automations All rights reserved
