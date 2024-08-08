@@ -46,6 +46,7 @@
     "tailwindcss": "^3.4.4",
     "vite": "^5.3.1"
   },
+  "homepage": "jayramana.github.io/zyre-web",
   "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
   "main": "postcss.config.js",
   "author": "",
