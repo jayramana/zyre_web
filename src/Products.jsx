@@ -6,6 +6,11 @@ import { FaFacebook } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { AiFillInstagram } from "react-icons/ai";
 import { IoLogoLinkedin } from "react-icons/io";
+import logo from "/new_logo.png"
+import line from "/line.svg"
+import tw_switch from "/2switch_new.png";
+import fr_switch from "/4gray_new.png";
+import ei_switch from "/8switch_new.png"
 
 const Products = () => {
   useEffect(() => {
@@ -15,13 +20,13 @@ const Products = () => {
     <main className="bg-black h-[100%]">
       <div
         className={`flex justify-between items-center  z-50 fixed w-[100%]
-        backdrop-blur-md pt-[2rem] px-[2rem]
+        backdrop-blur-md pt-[2rem] pb-[1rem] px-[2rem]
         `}
       >
         {/* Image */}
         <div>
           <a href="/">
-            <img src="/new_logo.png" alt="" className="h-[48px] " />
+            <img src={logo} alt="" className="h-[48px] " />
           </a>
           {/* <p>Zyre</p> */}
         </div>
@@ -39,12 +44,12 @@ const Products = () => {
                 Company
               </li>
             </a> */}
-            <a href="/products">
+            <a href="products">
               <li className="text-white font-[500] txt left font-zyre">
                 Products
               </li>
             </a>
-            <a href="/solutions">
+            <a href="solutions">
               <li className="text-white  font-[500] txt left font-zyre">
                 Solutions
               </li>
@@ -72,7 +77,7 @@ const Products = () => {
             data-aos-duration="1000"
           >
             <img
-              src="/2switch_new.png"
+              src={tw_switch}
               alt=""
               className="h-[400px] w-[400px]"
             />
@@ -100,7 +105,7 @@ const Products = () => {
             data-aos="fade-up"
             data-aos-duration="1000"
           >
-            <img src="/4gray_new.png" alt="" className="h-[400px] w-[400px]" />
+            <img src={fr_switch} alt="" className="h-[400px] w-[400px]" />
             <ul className="list-disc pt-[2rem] flex flex-col gap-[1rem]">
               <span className="uppercase text-white">Product Details</span>
               <li className="text-[#ffffff99] font-zyre text-sm">
@@ -130,7 +135,7 @@ const Products = () => {
             data-aos-duration="1000"
           >
             <img
-              src="/8switch_new.png"
+              src={ei_switch}
               alt=""
               className="h-[400px] w-[400px]"
             />
@@ -171,7 +176,7 @@ const Products = () => {
       {/* Products */}
       {/* Footer */}
       <div
-        className="bg-black flex-col h-[80vh] "
+        className="bg-black flex-col h-[80vh] pt-[3rem] "
         data-aos="fade-up"
         data-aos-duration="10000"
       >
@@ -179,7 +184,7 @@ const Products = () => {
         <section className="flex pl-[6rem] gap-[2rem]">
           <section className="flex flex-col gap-[2rem] p-[2rem]">
             <div>
-              <img src="/new_logo.png" alt="" />
+              <img src={logo} alt="" />
             </div>
             <div className="flex gap-[2rem] items-center">
               <span className="text-white font-bold font-zyre">
@@ -292,7 +297,7 @@ const Products = () => {
           {/*Fourth */}
         </section>
         <section>
-          <img src="/line.svg" alt="" className="w-[90%] pl-[8rem]" />
+          <img src={line} alt="" className="w-[90%] pl-[8rem]" />
           <div className="flex pt-[1rem] pl-[8rem]">
             <div className=" flex gap-[6rem]">
               <span className="text-[#ffffff99] font-zyre">

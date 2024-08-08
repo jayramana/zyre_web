@@ -9,13 +9,13 @@ import Products from './Products'
 
 const App = () => {
   return (
-    <Router>
+    <Router basename={import.meta.env.BASE_URL}>
       <Routes>
         <Route path='/' element={<Body />}></Route>
-        <Route path='/terms' element={<Terms />}></Route>
-        <Route path='/solutions' element={<Solutions />} />
-        <Route path='/image' element={<ImageSlide />} />
-        <Route path='/products' element={<Products/>} />
+        <Route path='terms' element={<Terms />}></Route>
+        <Route path='solutions' element={<Solutions />} />
+        <Route path='image' element={<ImageSlide />} />
+        <Route path='products'  element={<Products/>} />
       </Routes>
     </Router>
   )

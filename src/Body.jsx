@@ -9,6 +9,10 @@ import { AiFillInstagram } from "react-icons/ai";
 import { IoLogoLinkedin } from "react-icons/io";
 import "./index.css";
 import { GoChevronLeft, GoChevronRight } from "react-icons/go";
+import demo_video from "/zyre_demo.mp4";
+import logo from "/new_logo.png"
+import line from "/line.svg"
+import home from "/home.svg"
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -56,7 +60,7 @@ function Body() {
         {/* Image */}
         <div>
           <a href="/">
-            <img src="/new_logo.png" alt="" className="h-[48px] " />
+            <img src={logo} alt="" className="h-[48px] " />
           </a>
           {/* <p>Zyre</p> */}
         </div>
@@ -74,12 +78,12 @@ function Body() {
                 Company
               </li>
             </a> */}
-            <a href="/products">
+            <a href="products">
               <li className="text-white font-[500] txt left font-zyre">
                 Products
               </li>
             </a>
-            <a href="/solutions">
+            <a href="solutions">
               <li className="text-white  font-[500] txt left font-zyre">
                 Solutions
               </li>
@@ -96,7 +100,7 @@ function Body() {
 
       {/* Home-Start */}
       <div className="h-screen  pt-[6rem] pb-[4rem]  ">
-        <img src="/home.svg" alt="" className="w-[100%] h-auto relative" />
+        <img src={home} alt="" className="w-[100%] h-auto relative" />
         <div className="absolute top-[68%] left-[27%] font-[550]">
           <p className="text-white z-50 text-[4rem]">Zyre Home Automations</p>
         </div>
@@ -123,20 +127,20 @@ function Body() {
               <img
                 src={img[i]}
                 alt=""
-                className="rounded-md object-contain h-[350px] w-[350px] ml-[10rem] mb-[5rem] mt-[4rem]"
+                className="rounded-xl object-contain h-[350px] w-[350px] ml-[10rem] mb-[5rem] mt-[4rem]"
               />
             </a>
 
             <div className="duration-all">
-              <p className="text-white text-2xl pb-[.3rem]">{switches[i]}</p>
+              <p className="text-white text-2xl pb-[.3rem] font-zyre">{switches[i]}</p>
               <div className="flex gap-[1rem]">
-                <p className="border-[2px] border-white rounded-md text-white border-solid inline-block px-[4px] py-[2px] text-xs">
+                <p className="border-[2px] border-white rounded-md text-white border-solid inline-block px-[4px] py-[2px] text-xs font-zyre">
                   {color[i]}
                 </p>
-                <p className="border-[2px] border-white rounded-md text-white border-solid inline-block px-[4px] py-[2px] text-xs">
+                <p className="border-[2px] border-white rounded-md text-white border-solid inline-block px-[4px] py-[2px] text-xs font-zyre">
                   Wi-Fi
                 </p>
-                <p className="border-[2px] border-white rounded-md text-white border-solid inline-block px-[4px] py-[2px] text-xs">
+                <p className="border-[2px] border-white rounded-md text-white border-solid inline-block px-[4px] py-[2px] text-xs font-zyre">
                   Google,Siri
                 </p>
               </div>
@@ -183,7 +187,7 @@ function Body() {
           Demo Video
         </p>
         <video
-          src="/zyre_demo.mp4"
+          src={demo_video}
           className="h-[400px] w-[1200px] rounded-lg shadow-2xl shadow-[#B59410]"
           controls
         ></video>
@@ -199,7 +203,7 @@ function Body() {
         <span className=" font-[2rem] pb-[2rem] font-zyre font-bold text-[4rem] bg-gradient-to-b from-[#B59410] to-[#3F3001] inline-block text-transparent bg-clip-text ">
           Solutions
         </span>
-        <img src="/line.svg" alt="" />
+        <img src={line} alt="" />
         <div className="flex flex-col justify-center  ">
           <div className="flex gap-[15rem]">
             <section className="flex gap-[12rem] items-center py-[2rem]">
@@ -230,7 +234,7 @@ function Body() {
               </ul>
             </section>
           </div>
-          <img src="/line.svg" alt="" />
+          <img src={line} alt="" />
           <section className="flex gap-[12rem] items-center py-[2rem]">
             <div>
               <p className="text-white  text-xl font-zyre">Stores and Malls</p>
@@ -243,7 +247,7 @@ function Body() {
               <li className="text-[#ffffff99] font-zyre">Speed control</li>
             </ul>
           </section>
-          <img src="/line.svg" alt="" />
+          <img src={line} alt="" />
           <section className="flex gap-[12rem] items-center py-[2rem]">
             <div>
               <p className="text-white text-xl font-zyre">Industries</p>
@@ -254,7 +258,7 @@ function Body() {
               <li className="text-[#ffffff99] font-zyre">Dryers</li>
             </ul>
           </section>
-          <img src="/line.svg" alt="" />
+          <img src={line} alt="" />
         </div>
       </div>
       {/* Solutions */}
@@ -388,7 +392,7 @@ function Body() {
         <section className="flex pl-[6rem] gap-[2rem]">
           <section className="flex flex-col gap-[2rem] p-[2rem]">
             <div>
-              <img src="/new_logo.png" alt="" />
+              <img src={logo} alt="" />
             </div>
             <div className="flex gap-[2rem] items-center">
               <span className="text-white font-bold font-zyre">
@@ -501,7 +505,7 @@ function Body() {
           {/*Fourth */}
         </section>
         <section>
-          <img src="/line.svg" alt="" className="w-[90%] pl-[8rem]" />
+          <img src={line} alt="" className="w-[90%] pl-[8rem]" />
           <div className="flex pt-[1rem] pl-[8rem]">
             <div className=" flex gap-[6rem]">
               <span className="text-[#ffffff99] font-zyre">

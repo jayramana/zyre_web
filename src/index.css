@@ -1,7 +1,7 @@
 @layer base {
     @font-face {
       font-family: "zyrefont";
-      src: url("/public/fonts/ARIAL.TTF") format("truetype");
+      src: url("/fonts/ARIAL.TTF") format("truetype");
     }
   }
 

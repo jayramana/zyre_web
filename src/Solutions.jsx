@@ -4,10 +4,17 @@ import { Button } from "./components/ui/button";
 import { FaFacebook } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { AiFillInstagram } from "react-icons/ai";
+import light_control from "/light_control.jpg";
 import { IoLogoLinkedin } from "react-icons/io";
 import AOS from "aos";
 import "aos/dist/aos.css";
-// Mr.Godwin
+import logo from "/new_logo.png";
+import line from "/line.svg";
+import havac from "/hvac.jpg";
+import speed from "/speed.jpeg";
+import av from "/av_control.jpg";
+import schedule from "/schedule.jpg";
+import mobile from "/mobile_connect.jpg";
 
 const Solutions = () => {
   useEffect(() => {
@@ -17,11 +24,11 @@ const Solutions = () => {
     <main>
       {/* Nav-Start */}
       <div>
-        <div className="flex justify-between items-center backdrop-blur-md pt-[2rem] px-[2rem] z-50 fixed h-fit  w-[100%]">
+        <div className="flex justify-between items-center backdrop-blur-md pt-[2rem] pb-[1rem] px-[2rem] z-50 fixed h-fit  w-[100%]">
           {/* Image */}
           <div>
             <a href="/">
-              <img src="/new_logo.png" alt="" className="h-[48px] " />
+              <img src={logo} alt="" className="h-[48px] " />
             </a>
             {/* <p>Zyre</p> */}
           </div>
@@ -35,10 +42,10 @@ const Solutions = () => {
                 </a>
               </div>
               <li className="text-white font-[inter] font-[500] hover:underline font-zyre">
-                <a href="/products">Products</a>
+                <a href="products">Products</a>
               </li>
               <li className="text-white font-[inter] font-[500] hover:underline font-zyre">
-                <a href="/solutions">Solutions</a>
+                <a href="solutions">Solutions</a>
               </li>
             </ul>
           </div>
@@ -55,7 +62,7 @@ const Solutions = () => {
         <div className="flex" data-aos="fade-up" data-aos-duration="1000">
           <div className="flex flex-col">
             <img
-              src="/light_control.jpg"
+              src={light_control}
               alt=""
               className="rounded-lg  w-[1000px] h-[200px] "
             />
@@ -70,10 +77,10 @@ const Solutions = () => {
               control lighting via smartphones or voice commands. Smart lighting
               can be programmed to adjust brightness, change colors, or turn
               on/off based on schedules or occupancy sensors. It also supports
-              integration with other smart devices, enabling scenes like{" "}
-              movie mode or goodnight where lights adjust
-              automatically. This technology helps reduce energy consumption and
-              adds a layer of personalization and ambiance to living spaces.
+              integration with other smart devices, enabling scenes like movie
+              mode or goodnight where lights adjust automatically. This
+              technology helps reduce energy consumption and adds a layer of
+              personalization and ambiance to living spaces.
             </p>
           </div>
         </div>
@@ -101,25 +108,21 @@ const Solutions = () => {
           </div>
           <div>
             <img
-              src="/hvac.jpg"
+              src={havac}
               alt=""
               className="w-[1100px] h-[200px] rounded-lg "
             />
           </div>
         </div>
-        <div className="flex items-center" data-aos="fade-up"
-            data-aos-duration="1000">
-          <div className="flex flex-col" >
-            <img
-              src="/av_control.jpg"
-              alt=""
-              className="h-[200px] w-[1240px] rounded-lg "
-            />
+        <div
+          className="flex items-center"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          <div className="flex flex-col">
+            <img src={av} alt="" className="h-[200px] w-[1240px] rounded-lg " />
           </div>
-          <div
-            className="flex flex-col"
-            
-          >
+          <div className="flex flex-col">
             <p className="pl-[2rem] font-zyre">AV Control</p>
 
             <p className="leading-[2rem] px-[2rem] text-justify  text-[#ffffff99] font-zyre">
@@ -139,58 +142,64 @@ const Solutions = () => {
           </div>
         </div>
         <div className="flex" data-aos="fade-up" data-aos-duration="1000">
-          <p className="leading-[2rem] pr-[2rem] text-justify pt-[1rem] text-[#ffffff99] font-zyre">
-            Scheduling in home automation allows users to automate the operation
-            of connected devices according to a predefined timetable. This
-            feature enables smart devices such as lights, thermostats, HVAC
-            systems, and appliances to turn on or off, adjust settings, or
-            switch modes automatically based on specific times of the day, days
-            of the week, or user preferences. For example, lights can be
-            scheduled to turn on at sunset and off at bedtime, or the thermostat
-            can be set to lower the temperature during the night. This
-            scheduling capability not only enhances convenience and comfort but
-            also improves energy efficiency by reducing unnecessary energy
-            usage. It can also enhance home security by simulating occupancy
-            when homeowners are away.
-          </p>
+          <div className="flex flex-col">
+            <p className="font-zyre">Scheduling Connection</p>
+            <p className="leading-[2rem] pr-[2rem] text-justify pt-[1rem] text-[#ffffff99] font-zyre">
+              Scheduling in home automation allows users to automate the
+              operation of connected devices according to a predefined
+              timetable. This feature enables smart devices such as lights,
+              thermostats, HVAC systems, and appliances to turn on or off,
+              adjust settings, or switch modes automatically based on specific
+              times of the day, days of the week, or user preferences. For
+              example, lights can be scheduled to turn on at sunset and off at
+              bedtime, or the thermostat can be set to lower the temperature
+              during the night. This scheduling capability not only enhances
+              convenience and comfort but also improves energy efficiency by
+              reducing unnecessary energy usage. It can also enhance home
+              security by simulating occupancy when homeowners are away.
+            </p>
+          </div>
           <div className="flex flex-col">
             <img
-              src="/schedule.jpg"
+              src={schedule}
               alt=""
               className="w-[1200px] h-[200px] rounded-lg "
             />
-            <p className="text-center pt-[1rem] font-zyre">
-              Scheduling Connection
-            </p>
           </div>
         </div>
         <div className="flex" data-aos="fade-up" data-aos-duration="1000">
           <div className="flex flex-col">
             <img
-              src="/light_control.jpg"
+              src={mobile}
               alt=""
               className="rounded-lg  w-[1200px] h-[200px] "
             />
-            <p className="text-center pt-[1rem] font-zyre">
+          </div>
+          <div className="flex flex-col">
+            <p className=" pl-[2rem] font-zyre">
               Mobile Connectivity
             </p>
+            <p className="leading-[2rem] px-[2rem] text-justify pt-[1rem] text-[#ffffff99] font-zyre">
+              Mobile connectivity in home automation allows users to control and
+              monitor their smart home devices from anywhere using a smartphone
+              or tablet. Through dedicated mobile apps, homeowners can remotely
+              manage lighting, HVAC systems, security cameras, door locks, and
+              more. This connectivity enables real-time alerts and
+              notifications, providing instant updates on the status of various
+              devices and home security. Users can also adjust settings, create
+              automation schedules, and activate scenes directly from their
+              mobile devices. Mobile connectivity enhances convenience, offering
+              control over home systems while on the go, and improves security
+              by allowing immediate responses to unexpected events or
+              emergencies.
+            </p>
           </div>
-          <p className="leading-[2rem] px-[2rem] text-justify pt-[1rem] text-[#ffffff99] font-zyre">
-            Mobile connectivity in home automation allows users to control and
-            monitor their smart home devices from anywhere using a smartphone or
-            tablet. Through dedicated mobile apps, homeowners can remotely
-            manage lighting, HVAC systems, security cameras, door locks, and
-            more. This connectivity enables real-time alerts and notifications,
-            providing instant updates on the status of various devices and home
-            security. Users can also adjust settings, create automation
-            schedules, and activate scenes directly from their mobile devices.
-            Mobile connectivity enhances convenience, offering control over home
-            systems while on the go, and improves security by allowing immediate
-            responses to unexpected events or emergencies.
-          </p>
         </div>
         <div className="flex" data-aos="fade-up" data-aos-duration="1000">
-          <p className="leading-[2rem] px-[2rem] text-justify pt-[1rem] text-[#ffffff99] font-zyre" >
+          <div className="flex flex-col">
+          <p className="pl-[2rem] font-zyre">Speed Control</p>
+
+          <p className="leading-[2rem] px-[2rem] text-justify pt-[1rem] text-[#ffffff99] font-zyre">
             Speed control in home automation systems enhance comfort and energy
             efficiency by allowing precise management of lighting intensity and
             fan speeds through smartphone apps, voice commands, or automation
@@ -198,13 +207,13 @@ const Solutions = () => {
             transitions and customized settings to suit various needs and
             preferences.
           </p>
+          </div>
           <div className="flex flex-col">
             <img
-              src="/light_control.jpg"
+              src={speed}
               alt=""
               className="rounded-lg  w-[600px] h-[200px] "
             />
-            <p className="text-center pt-[1rem] font-zyre">Speed Control</p>
           </div>
         </div>
       </div>
@@ -214,7 +223,7 @@ const Solutions = () => {
         <section className="flex pl-[6rem] gap-[2rem]">
           <section className="flex flex-col gap-[2rem] p-[2rem]">
             <div>
-              <img src="/new_logo.png" alt="" />
+              <img src={logo} alt="" />
             </div>
             <div className="flex gap-[2rem] items-center">
               <span className="text-white font-bold font-zyre">
@@ -327,7 +336,7 @@ const Solutions = () => {
           {/*Fourth */}
         </section>
         <section>
-          <img src="/line.svg" alt="" className="w-[90%] pl-[8rem]" />
+          <img src={line} alt="" className="w-[90%] pl-[8rem]" />
           <div className="flex pt-[1rem] pl-[8rem]">
             <div className=" flex gap-[6rem]">
               <span className="text-[#ffffff99] font-zyre">
