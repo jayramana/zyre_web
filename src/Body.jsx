@@ -120,7 +120,7 @@ function Body() {
         <div className=" flex items-center justify-center px-[4rem] pt-[4rem]">
           <div className="flex  justify-center shadow-2xl shadow-[#B59410] rounded-lg px-[4rem] py-[2rem]">
             <a
-              href="/products
+              href="products
            "
             >
               <img

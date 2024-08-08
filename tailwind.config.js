@@ -1,16 +1,18 @@
 /** @type {import('tailwindcss').Config} */
-export const darkMode = ["class"];
-export const content = [
+const darkMode = ["class"];
+const content = [
   './pages/**/*.{js,jsx}',
   './components/**/*.{js,jsx}',
   './app/**/*.{js,jsx}',
   './src/**/*.{js,jsx}',
 ];
-export const theme = {
+const theme = {
   extend: {
     fontFamily: {
       zyre: ["zyrefont", "sans-serif"],
     },
   },
 };
-export const plugins = [];
+const plugins = [];
+
+export { darkMode, content, theme, plugins };
