@@ -10,9 +10,12 @@ import { IoLogoLinkedin } from "react-icons/io";
 import "./index.css";
 import { GoChevronLeft, GoChevronRight } from "react-icons/go";
 import demo_video from "/zyre_demo.mp4";
-import logo from "/new_logo.png"
-import line from "/line.svg"
-import home from "/home.svg"
+import logo from "/new_logo.png";
+import line from "/line.svg";
+import home from "/home.svg";
+import tw_switch from "/2switch_new.png";
+import fr_switch from "/4gray_new.png";
+import ei_switch from "/8switch_new.png";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -21,7 +24,7 @@ function Body() {
   const switches = ["8 Switches", "4 Switches", "2 Switches"];
   const connect = "Wi-Fi";
   const voice = "Google,Siri";
-  const img = ["8switch_new.png", "4gray_new.png", "2switch_new.png"];
+  const img = [`${ei_switch}`, `${fr_switch}`, `${tw_switch}`];
   const color = ["White", "Silver", "Black"];
   useEffect(() => {
     AOS.init();
@@ -73,11 +76,7 @@ function Body() {
                 </li>
               </a>
             </div>
-            {/* <a href="/company">
-              <li className="text-white font-[inter] font-[500] hover:underline font-zyre">
-                Company
-              </li>
-            </a> */}
+
             <a href="products">
               <li className="text-white font-[500] txt left font-zyre">
                 Products
@@ -132,16 +131,18 @@ function Body() {
             </a>
 
             <div className="duration-all">
-              <p className="text-white text-2xl pb-[.3rem] font-zyre">{switches[i]}</p>
+              <p className="text-white text-2xl pb-[.3rem] font-zyre">
+                {switches[i]}
+              </p>
               <div className="flex gap-[1rem]">
                 <p className="border-[2px] border-white rounded-md text-white border-solid inline-block px-[4px] py-[2px] text-xs font-zyre">
                   {color[i]}
                 </p>
                 <p className="border-[2px] border-white rounded-md text-white border-solid inline-block px-[4px] py-[2px] text-xs font-zyre">
-                  Wi-Fi
+                  `${connect}`
                 </p>
                 <p className="border-[2px] border-white rounded-md text-white border-solid inline-block px-[4px] py-[2px] text-xs font-zyre">
-                  Google,Siri
+                  `${voice}`
                 </p>
               </div>
             </div>
