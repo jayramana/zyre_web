@@ -10,7 +10,7 @@ const App = () => {
   return (
     <Router basename={import.meta.env.BASE_URL}>
       <Routes>
-        <Route path='/' element={<Body />}></Route>
+        <Route path='/' element={<Body />}/>
         <Route path='terms' element={<Terms />}></Route>
         <Route path='solutions' element={<Solutions />} />
         <Route path='products'  element={<Products/>} />
