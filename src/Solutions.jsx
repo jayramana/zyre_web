@@ -36,15 +36,15 @@ const Solutions = () => {
             <ul className="flex gap-[4rem]">
               <div className="flex flex-col items-center">
                 <a href="/">
-                  <li className="text-white font-[inter] font-[500] hover:underline font-zyre">
+                  <li className="text-white font-[inter] font-[500] txt left  font-zyre">
                     Home
                   </li>
                 </a>
               </div>
-              <li className="text-white font-[inter] font-[500] hover:underline font-zyre">
+              <li className="text-white font-[inter] font-[500] txt left  font-zyre">
                 <a href="products">Products</a>
               </li>
-              <li className="text-white font-[inter] font-[500] hover:underline font-zyre">
+              <li className="text-white font-[inter] font-[500] txt left  font-zyre">
                 <a href="solutions">Solutions</a>
               </li>
             </ul>
