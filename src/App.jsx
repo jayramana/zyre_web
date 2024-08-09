@@ -8,6 +8,7 @@ import Products from './Products'
 
 const App = () => {
   return (
+    <>
     <Router basename={import.meta.env.BASE_URL}>
       <Routes>
         <Route path='/' element={<Body />}/>
@@ -16,6 +17,7 @@ const App = () => {
         <Route path='products'  element={<Products/>} />
       </Routes>
     </Router>
+    </>
   )
 }
 
