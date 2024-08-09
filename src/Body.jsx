@@ -1,8 +1,8 @@
 /* eslint-disable no-unused-vars */
-import { Button } from "@/components/ui/button";
+import { Button } from "./components/ui/button";
 import React, { useState, useEffect, useRef } from "react";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+import { Input } from "./components/ui/input";
+import { Textarea } from "./components/ui/textarea";
 import { FaFacebook } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { AiFillInstagram } from "react-icons/ai";

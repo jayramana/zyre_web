@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Button } from "@/components/ui/button";
+import { Button } from "./components/ui/button";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { FaFacebook } from "react-icons/fa";
