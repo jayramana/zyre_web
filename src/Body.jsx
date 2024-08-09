@@ -139,10 +139,10 @@ function Body() {
                   {color[i]}
                 </p>
                 <p className="border-[2px] border-white rounded-md text-white border-solid inline-block px-[4px] py-[2px] text-xs font-zyre">
-                  ${connect}
+                  {connect}
                 </p>
                 <p className="border-[2px] border-white rounded-md text-white border-solid inline-block px-[4px] py-[2px] text-xs font-zyre">
-                  ${voice}
+                  {voice}
                 </p>
               </div>
             </div>
