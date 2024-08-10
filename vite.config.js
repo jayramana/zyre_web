@@ -4,7 +4,6 @@ import { defineConfig } from "vite"
 
 export default defineConfig({
   plugins: [react()],
-  base:"/zyre_web/",
   resolve: {
     alias: {
       // eslint-disable-next-line no-undef
