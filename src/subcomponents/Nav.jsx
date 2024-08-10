@@ -28,12 +28,12 @@ const Nav = ({ bottomRef, scrollToBottom }) => {
               </a>
             </div>
 
-            <a href="products">
+            <a href="/zyre_web/products">
               <li className="text-white font-[500] txt left font-zyre">
                 Products
               </li>
             </a>
-            <a href="solutions">
+            <a href="/zyre_web/solutions">
               <li className="text-white  font-[500] txt left font-zyre">
                 Solutions
               </li>

@@ -11,10 +11,10 @@ const App = () => {
     <>
       <Router>
         <Routes>
-          <Route path="/" element={<Body />} />
-          <Route path="/terms" element={<Terms />}></Route>
-          <Route path="/solutions" element={<Solutions />} />
-          <Route path="/products" element={<Products />} />
+          <Route path="/zyre_web" element={<Body />} />
+          <Route path="/zyre_web/terms" element={<Terms />}></Route>
+          <Route path="/zyre_web/solutions" element={<Solutions />} />
+          <Route path="/zyre_web/products" element={<Products />} />
         </Routes>
       </Router>
     </>
